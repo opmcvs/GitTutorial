@@ -1,0 +1,36 @@
+
+body {
+background-color:blue;
+background-size: cover;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-weight: bold;
+text-align: center;
+
+}
+
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20
+}
+button{
+border:none;
+color: red;
+font-weight:bold;
+background-color: black;
+
+
+
+}
+.saveclass{
+    color:blueviolet;
+    margin-right : 30px;
+}
+
+p  {
+    color:aquamarine
+}

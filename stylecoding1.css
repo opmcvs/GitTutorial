@@ -1,0 +1,54 @@
+.Picture{
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  opacity:0.5;
+
+}
+body{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size:large;
+  text-align: center;
+}
+
+p{
+  color:brown  ;
+  font-size:large;
+  background-color: beige;
+}
+button{
+    background : rgb(223, 127, 127);
+    cursor: pointer;
+    width: 150px;
+    border-radius: 40px;
+    padding-top : 5px;
+    padding-bottom : 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+
+
+
+#error{
+    color:red;
+    font-weight:300;
+}
+h1{
+color:black
+
+
+}
+.header{ 
+  font-style: italic;
+  font-weight: bold;
+  font-size:large;
+  background-color: green;
+  background-size:cover;
+  text-align: center;
+}
+

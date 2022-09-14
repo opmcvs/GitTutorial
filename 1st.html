@@ -1,0 +1,50 @@
+<!Doctype>
+<html>
+
+<head>
+    <Title>This is a test</Title>
+</head>
+<body>
+<button onclick="todos.push('new todo');" >Press me</button>
+
+<!--- disabled ='True' if off the button after the todo.push ; "-->
+
+<script>
+//let todo = 'Get groceries';
+//let todo2 = 'Wash car';
+//let todo3 = 'Make dinner';
+
+let todos = ['Get groceries','Wash car','Make dinner'];
+//todos.push ('another todo'); //adds on the array
+//todos.pop (); // removes the last in the array
+todos.forEach(function(todoTitle) {
+let element = document.createElement('div');
+element.innerText = todoTitle;
+document.body.appendChild(element );
+
+}); 
+//function addTodo(todoTitle){
+   // let element =document.createElement("div");
+   // element.innerText = todoTitle;
+   // document.body.appendChild(element);
+
+//}
+
+//addTodo(todo);
+//addTodo(todo2);
+//addTodo(todo3);
+function greeting(firstName){
+let element = document.createElement('div');
+element.innertext = 'hello'+ firstName;
+document.body.appendChild(element);
+
+}
+
+
+greeting("simon");
+
+</script>
+
+
+</body>
+</html>
