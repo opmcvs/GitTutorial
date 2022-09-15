@@ -44,11 +44,37 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
- 
+
+function getRandomCard(){
+    let randomNumber =  Math.floor(Math.random()*13)+ 1  
+    
+    if(randomNumber >10) {
+         return 10
+         }
+         else if(randomNumber ===1){
+            return 11
+         }
+         else {
+           return randomNumber 
+         }
+
+
+    return Math.floor(Math.random()*13)+ 1
+    
+}
+
+
+function startGame(){
+    renderGame()
+}
+
+
 function renderGame(){
     sumEl.textContent = "Sum : " + sum
-    cardsEl.textContent = "Cards : " + cards[0]+ " " +cards[1]
-    
+    //cardsEl.textContent = "Cards : " + cards[0]+ " " +cards[1]
+    for (let i=0;i<cards.length;i++){
+     sumEl.textContent+= cards[i] + " "
+    }
 if(sum < 21){
     message="Do you want to draw another?"
 }
@@ -91,5 +117,26 @@ messageEl.textContent= message
    let cardstest1 = [7, 3, 9]  
    for(let i=0; i < cardstest1.length; i++) {
 
-     console.log(cardtest1[i])
+     console.log(cardstest1[i])
    }
+
+   let sentence = ["hello ","my ","name ","is ","Om "]
+   let greetingEl = document.getElementById("greetings-el")
+
+//for(let i= 0; i<sentence.length ; i++) {
+
+//greetingEl.textContent +=sentence[i] + " "
+//console.log(sentence[i])
+//}
+ //let  randomNumber = Math.random() * 6 //from 0000 to before 1 but with 6 until 6  not over 
+ //console.log(randomNumber)
+ 
+ //let  floorNumber = Math.floor() //usually use on positive numbers, to remove the zeros in Math.random
+// console.log(floorNumber)
+/* function rollDice(){
+  let randomNumberx = Math.floor ( Math.random() * 6) +1
+return randomNumberx
+
+ }
+ console.log(rollDice())
+ */
