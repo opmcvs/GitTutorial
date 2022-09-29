@@ -1,0 +1,86 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size:large;
+    text-align: center;
+    margin:0;
+    padding: 10 px;
+    
+  }
+.apple{
+background-color: blue;
+color:black;
+margin-top: 20px;
+margin-bottom: 20px;
+width: 400px;
+align-self: center;
+padding-top : 5px;
+
+
+}
+.orange{
+    background-color: red;
+    margin-top:  20 px;
+    width: 200px;
+    align-self: center;
+    padding-top : 5px;
+    text-align: center;
+
+    }
+
+    button{
+      margin: 50px;
+      padding:10px;
+      padding-bottom: 10px;
+      border:1px solid red;
+      width:100px;
+      height:30px;
+    background-color: green;
+    color:white;
+    align-content: left;
+    text-align: left;
+
+    }
+   
+   
+    #delete-btn {
+      background-color: white;
+      border:1px solid green;
+      color:black;
+    }
+    
+
+
+
+
+
+    input{
+    width:100%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: left 10px; 
+    padding: right 10px; 
+    box-sizing:border-box;
+    border: 2px solid #5f9341;
+    font-weight: bold;
+    }
+
+    div{
+    cursor:pointer;
+    background:lightgreen;
+    padding:40px;
+    width: 200px;
+    text-align:center;
+    margin: 20px auto;
+    color: white;
+    font-weight:bolder;
+
+
+    }
+
+
+   <!-- li a {
+
+    }-->

@@ -34,17 +34,25 @@ function mulbtn(){
     total.textContent = "Sum: "+ result 
 }
 
-let firstCard = 6
-let secondCard = 9
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+//let firstCard = 6 no longer needed once have random array
+//let secondCard = 9
+let player = {
+    name: "Om",
+    chip: 3000
+}
+
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
 
+
+playerEl.textContent = player.name + " : $" + player.chip
 function getRandomCard(){
     let randomNumber =  Math.floor(Math.random()*13)+ 1  
     
@@ -65,6 +73,12 @@ function getRandomCard(){
 
 
 function startGame(){
+    isAlive = true // like an on switch to start the function 
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard,secondCard]
+    sum = firstCard + secondCard
+
     renderGame()
 }
 
@@ -91,13 +105,13 @@ messageEl.textContent= message
 
 }
  function runNewCard(){
-    
-    let card = 6 
+    if(isAlive=== true && hasBlackJack === false ){
+    let card = getRandomCard()
     sum += card
     cards.push(card)
-    console.log(cards)
+    
     renderGame()
-   
+    }
  }
  function startGame(){
     renderGame()
@@ -140,3 +154,104 @@ return randomNumberx
  }
  console.log(rollDice())
  */
+/*let hasCompletedCourse = true
+let givesCertificate = true
+
+if (hasCompletedCourse ===true){
+    if(givesCertificate === true){
+        generateCertificate()
+    }
+    }
+function generateCertificate (){
+    console.log("Generating certificate....")
+} */
+/*let hasSolvedChallenge = false
+let hasHinsLeft = false
+
+function showSolution(){
+    if (hasSolvedChallenge===true && hasHinsLeft ===true){
+
+    console.log("Showing the solution.....")
+    }
+}
+showSolution()*/
+
+/*et likesDocumentaries = false
+let likesStarups = false
+
+if(likesDocumentaries===true || likesStarups ===false){
+recommendMovie()
+}
+
+function recommendMovie(){
+    console.log("Hey, check out this  new film.....")
+} */
+
+/* for Arrays
+let airbndCastleListing = {
+  isitcheap: true,
+  oneString: "Hey there",
+  arrayHere: ["old","beautiful"]
+
+
+}
+console.log(airbndCastleListing.isitcheap)
+console.log(airbndCastleListing.arrayHere[1])
+*/
+
+/* for object and function
+let person = {
+    name: "Om",
+    age : 38,
+    Country: "USA",
+}
+
+function logData(){
+let dataName = person.name + " is " +person.age +" years old and lives in " +person.Country
+console.log(dataName)
+}
+logData()
+*/
+
+/* for push,pop, shift and unshift
+let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"]
+
+for(let i= 0;i <largeCountries.length; i++){
+    largeCountries.shift()
+    largeCountries.unshift("China")
+    
+    largeCountries.pop()
+    largeCountries.push("Pakistan")
+
+    console.log("-"+largeCountries[i])
+    +
+}*/
+
+let dayOfMonth = 31
+let weekday = "Friday"
+
+
+if(dayOfMonth === 13 && weekday === "Friday"){
+ console.log("Spooky face")
+
+}
+/* For Generating Random Date
+function getRandomDate() {
+    const maxDate = Date.now();
+    const timestamp = Math.floor(Math.random() * maxDate);
+    return new Date(timestamp);
+}
+
+console.log(getRandomDate()); */
+
+
+// using random with return 
+let hands = ["rock","paper","scissor"]
+ 
+function randomItem (){
+    
+     let randomKey = Math.floor(Math.random()* hands.length/* or you can use 3 */) +1
+     return hands [randomKey]
+}
+
+console.log(randomItem ())
