@@ -1,0 +1,18 @@
+button{
+    color:aliceblue;
+    
+      padding:10px;
+      padding-bottom: 10px;
+      border:1px solid red;
+      width:150px;
+      height:30px;
+    background-color: green;
+
+    align-content: center;
+    text-align: center;
+    
+    float:none;
+    position:right;
+    margin-left: 400px;
+
+}
