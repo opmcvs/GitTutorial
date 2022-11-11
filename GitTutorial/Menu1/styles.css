@@ -1,0 +1,46 @@
+h1{
+color:brown;
+margin-left:400px;
+}
+h2{
+  
+  text-align:center; 
+  text-decoration:underline;  
+}
+
+.title {
+  margin-top: 20px;
+  display: flex;
+  flex: 50%;
+  flex-direction: row;
+ 
+
+  
+
+
+}
+
+
+
+
+
+
+
+
+
+.photo{
+   width:200px;
+   height: 200px;
+   object-fit:contain;
+   border:2px solid;
+   padding:3px;
+   border-color:rgb(212, 153, 81);
+   display:inline-flex;
+   /*flex-direction:row;*/
+}
+
+
+
+
+
+

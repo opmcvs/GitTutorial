@@ -1,0 +1,232 @@
+
+/*For margins always set to 0 first to reset it*/
+/*Which element gets the style- called css specificity-through its selector(in css)(element in HTML) more specific like class*/
+p{
+  font-family:Arial;/*For all Paragraphs*/
+  margin-top:0; /*To clear the default*/
+  margin-bottom:0;
+}
+h3{
+background-color: brown;
+color:white;
+border: none ;
+height: 40px;
+width: 205px;
+border-radius:5px;
+text-align: center;
+cursor:pointer;
+margin-left: 300px;
+}
+.join-button{
+background-color:aqua;
+border-color:blue;
+border-style:double;
+border-width:5px;
+border-radius:4px;
+color:rgb(143, 180, 107);
+height:36px;
+width: 50px;
+/*box-shadow: 10px 5px 10px black;/*horizontal first 0, second is vertical from the bottom, the 3rd one is the blur*/
+box-shadow: 10px 5px 10px rgba(0, 0, 0, .15);                          /* so we can include the opacity*/
+vertical-align: top;
+}
+.tweet-button{
+margin-left:50px;    
+background-color:bisque;
+border:none;
+height:36px;
+width:50px;
+border-radius:18px;
+font-weight:bold;
+font-size: 15px;
+text-align:center;
+padding-left:3px ;
+transition:all 1s;/* you can create multiple property to be tartegete in this porperty separated by a comma,*/
+vertical-align: top;
+}
+.tweet-button:hover{/*its a pseudo class- adds an additional style*/
+ 
+ background-color:coral;
+ opacity:0.7;
+box-shadow: 10px 5px 10px rgba(0, 0, 0, .15);/*A is for alpha the opacity*/
+}
+
+.tweet-button:active{/*once clicked will activate*/
+background-color:blueviolet;    
+height:200px;
+width:200px;
+opacity:0.3;
+
+}
+
+.subscribe-button{
+ 
+ border-style: dotted;
+ background-color:rgb(86, 59, 112);
+ margin-left:100px;
+ padding-left:18px;
+ padding-bottom:16px;
+ padding-top:10px;
+ border-radius:10px;
+ vertical-align:top;/*to align all the buttons for example-assign to all you want to align*/
+}
+.talking-tech{
+  font-family:Arial, Helvetica, sans-serif;  
+  font-size:30px;
+  font-weight:900;
+  font-style: oblique;
+  text-align:center;
+  width:280px;/*to force it to the next line*/
+  line-height:30px;/*the distance between lines*/
+  margin-bottom:15px;/*for the distance from the next line need to reset first  */
+}
+
+.views{
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:20px;
+ color:blueviolet; 
+ margin-top:0;/*for the distance from the talking tech need to reset first*/  
+
+margin-bottom:20px;
+}
+
+.video-author {
+font-family:Arial;
+font-size:14px;
+color:cornflowerblue;
+margin-top:0;
+margin-bottom:20px;
+}
+
+.video-description{
+font-family:Arial;
+font-size:14;
+color: cornflowerblue;
+width:280px;
+line-height:22px;
+margin-top:0;
+margin-bottom:100px;
+}
+
+.apple-text{
+margin-bottom:50px;
+font-size:14px;
+background-color:crimson;
+color:white;
+text-align:center;
+padding-top:18px;
+padding-bottom:18px;
+}
+
+.shop-link{
+  cursor:pointer;
+  margin-left:10px;
+}
+
+.shop-link:hover{
+text-decoration:underline;
+}
+
+.thumbnail{
+  width:300px;
+  display:block;
+  /*height:300px;
+  object-fit:contain;
+  object-position:center;
+  border-width:2px;
+  border-style:solid;
+  border-color:red;*/
+}
+
+.search-bar{
+  font-size: 20px;
+  margin-left: 12px;
+  display:block;
+}
+
+.video-title{
+width:300px;
+line-height:30px;
+
+
+}
+
+.video-authornew,.video-statsnew{
+
+display: inline-block;
+}
+.video-preview{
+  width:300px;
+  display: inline-block;
+  vertical-align:top;
+  margin-right: 20px;
+}
+/*divs have a default value of 100percent so need to reset even 
+though already selected display-inline-block*/
+.channel-picture{
+display:inline-block;
+width: 50px;
+}
+.video-info{
+display:inline-block;
+width:200px;
+vertical-align:top;
+}
+
+.profile-picture{
+  width:40px;
+  vertical-align:top;
+  margin-left:3px;
+}
+
+.thumbnail-row{
+  margin-bottom:10px;
+}
+
+
+
+.video-statsnew,.video-authornew{
+  font-size:12px;
+  color:black;
+}
+
+.video-authornew{
+  margin-bottom:6px;
+}
+/*default no extra space in between
+per 100px is per column- as many as you want
+2.what you add within the div will remain in the div size set by grid-template-columns
+If more elements then columns it will wrap around the first column size like in 100px*/
+.grid-style{
+  display:grid;
+  /*grid-template-columns: 100px 300px basic form*/
+  grid-template-columns:100px 1fr 2fr;
+  margin-bottom:150px;
+}
+
+.div1{
+background-color:blue;
+
+}
+.div2{
+background-color:blueviolet;
+}
+.below-grid {/* div3 and div4  would follow the  first colomn*/
+margin-top:20px;
+}
+.div3{
+background-color:brown;
+}
+.div4{
+background-color:aquamarine
+}
+
+.second-line{
+display:grid;
+grid-template-columns: 100px 1fr 2fr;
+column-gap: 100px;
+row-gap:30px;
+margin-bottom:500px;
+
+
+}

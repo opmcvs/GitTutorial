@@ -1,0 +1,35 @@
+button{
+margin-top: 20px;
+margin-left:300px;
+}
+
+.close-btn{
+    
+
+    margin-top: 05px;
+    margin-left:auto;
+
+}
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-white);
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1 rem;
+    box-shadow: var(--clr-red-dark);
+    transition: var(--transition);
+    transform:translate(-100%);  /*hide the sidebar all the way*/
+}
+
+.show-sidebar{
+    transform: translate(0);/*to show the sidebar again*/
+}
+@media screen and (min-width:676px){
+    .sidebar{
+        width:400px;
+    }
+}

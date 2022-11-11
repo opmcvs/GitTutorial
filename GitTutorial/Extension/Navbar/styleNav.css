@@ -1,0 +1,57 @@
+body{
+
+
+}
+
+.nav-toggle{
+height: 40px;
+width : 40px;
+margin-top: 08px;
+margin-right:10px;
+display: flex;
+flex-flow: row wrap;
+flex-wrap:nowrap;
+height:20px;
+width:20px;
+justify-content:center;
+align-items:flex-end;
+
+}
+
+
+
+.social-icons{
+/*display:none;*/
+
+}
+.links{
+height:0;
+overflow: hidden;
+transition: var(--transition);
+
+}
+.links a:hover{
+    background:transparent; 
+   
+   }
+   
+
+
+
+
+
+/*toggle class*/
+.show-links{
+    height: 10rem;
+}
+@media screen and (min-width: 800px){
+.nav-center{
+    max-width:1170px;
+    margin: 0 auto;
+    display:flex;
+    align-items : center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    
+    }}
