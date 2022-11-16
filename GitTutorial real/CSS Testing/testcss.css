@@ -140,11 +140,11 @@ text-decoration:underline;
   border-color:red;*/
 }
 
-.search-bar{
+/*.search-bar{
   font-size: 20px;
   margin-left: 12px;
   display:block;
-}
+} */
 
 .video-title{
 width:300px;
@@ -242,7 +242,8 @@ column-gap:16px;
 row-gap:40px;
 }
 /*Flex box-are like inline block elements,it
-will maintain vertical alignment*/
+will maintain vertical alignment
+flex will adjust with the page while a predifed widht wont*/
 .flex-sample{
 margin-bottom:150px;
 display:flex;
@@ -256,6 +257,10 @@ margin-top: 80px;
 .flex-sample3{
 display:flex;
 flex-direction:row;
+/*justify-content: start;
+justify-content:space-between;
+align-items:stretch- vertical align  I 
+same like justify-content but for horizontal*/
 
 }
 
@@ -265,3 +270,38 @@ flex: 100px;
 .div2af{
 flex:1;
 }
+
+body{
+  margin:0;
+}
+/*Flex box*/
+/*EVEN THOUGH A SUB DIV IS UNDER THE DIV DISPLAY:FLEX IF
+YOU USE A VALUE USE UNDER FLEX YOU NEED TO CHANGE IT TO FLEX
+IT ONLY AFFECTS THE FIRST LAYER*/
+.header{
+  height:55px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;/*put spaces inbetween equally across the horizontal space*/
+}
+
+.left-section{
+  background-color:lightblue;
+  width:150px;
+  margin-right:70px;
+}
+.middle-section{
+  background-color:pink;
+  flex:1;
+  margin-right:35px;
+  max-width:300px;/*to limit the width while resizing the page*/
+  display: flex;
+  align-items:center;
+}
+
+.right-section{
+  background-color:aqua;
+  width:200px;
+  
+}
+/*Flex box*/
