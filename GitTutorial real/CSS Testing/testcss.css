@@ -283,6 +283,13 @@ IT ONLY AFFECTS THE FIRST LAYER*/
   display:flex;
   flex-direction:row;
   justify-content:space-between;/*put spaces inbetween equally across the horizontal space*/
+  border-bottom-width:2px;
+  border-bottom-style:solid;
+  border-bottom-color:blue;
+  position:fixed;
+  top: 470px;
+  
+
 }
 
 .left-section{
