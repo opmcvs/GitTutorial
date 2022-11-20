@@ -43,7 +43,7 @@ display:flex;
 background-color:pink;
 height:200px;
 width:300px;
-margin-bottom:1000px;
+margin-bottom:400px;
 position:relative;/*purpose so you can add a 
 position absolute
 to make this possible div1 will be master and div2
@@ -71,7 +71,7 @@ width:24px;
 margin-bottom:4px;
 cursor:pointer;
 }
-.sidebar-link div{/*targets all the divs in the class*/
+.sidebar-link .div{/*targets all the divs in the class*/
 font-family:arial;
 font-size:10px;
 }
@@ -84,4 +84,33 @@ background-color:blueviolet;
 display:flex;
 flex-shrink:100px;
 flex-grow:100px ;
+}
+.search-img{
+    height:20px;
+    width:20px;
+}
+
+.search-box{
+    background-color:blue;
+    width:200px;
+    height:20px;
+    display:flex;
+    position:relative;
+}
+
+.search-box .tooltip{
+position:absolute;
+background-color:gray;
+color:white;
+padding-top:5px;
+opacity:0;
+transition:opacity 0.15s;
+pointer-events:none;/*nothing happens whenyou point*/
+white-space: nowrap;/*prevents the text from wrapping around*/
+
+}
+.search-box:hover .tooltip{
+opacity:1;
+
+
 }
