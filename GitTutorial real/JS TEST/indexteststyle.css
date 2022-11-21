@@ -2,3 +2,11 @@
     background-color:blueviolet;
     color:white;
 }
+
+button{
+    background-color:brown;
+    color:white;
+    border-width:3px;
+    border-style:double;
+    
+}
