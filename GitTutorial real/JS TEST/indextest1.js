@@ -117,3 +117,35 @@ div.innerText = title1;
 document.body.appendChild(div);
 }
 
+// to attach an innertext to a div, so it will be rendered only there
+//first get the id from the div
+
+//this part here wipes out the div 
+//document.getElementById('todo-list'(the div id)).innerHTML='';
+ 
+/*todos.forEach(function (todoTitile){
+let element =document.createElement('div');
+element.innerText = todoTitle;
+let todoList =  document.getElementById('todo-list');
+todoList.appendChild(element);
+
+});*/
+
+//Create a shopping cart w/3buttons to add the 4th to clear
+// BONUS POINTS if you saved this variable outside the
+  // function so you can reuse it and not have to run
+  // document.getElementById() every time.
+  const cart = document.getElementById('cart');
+
+  // BONUS POINTS if you wrote this function with 1 parameter.
+  // Writing separate functions like addApple(), addTomato(),
+  // is fine too, but this make the function more reusable.
+  function addToCart(food) {
+    const cartItem = document.createElement('div');
+    cartItem.innerText = food;
+    cart.appendChild(cartItem);
+  }
+
+  function clearCart() {
+    cart.innerHTML = '';
+  }
