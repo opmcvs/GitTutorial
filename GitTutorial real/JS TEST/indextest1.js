@@ -114,7 +114,7 @@ let title1= inputE.value;
 
 let div = document.createElement('div');
 div.innerText = title1;
-document.body.appendChild(div);
+document.body.innerHTML(div);
 }
 
 // to attach an innertext to a div, so it will be rendered only there
@@ -149,3 +149,78 @@ todoList.appendChild(element);
   function clearCart() {
     cart.innerHTML = '';
   }
+ //covert to cm and another button to inch
+// value is a string and strings can't be multiplied. We need
+// to convert it into a number before we can multiply it.
+  const measurement = document.getElementById('measurement');
+
+  function convertToCm(){
+const value = measurement.value;
+const convertedValue = +value*2.54;
+
+const result = document.createElement('div');
+result.innerText = convertedValue;
+document.body.appendChild(result);
+ }
+ function convertToInch(){
+  const value =measurement.value;
+  const convertedValue = +value/2.54;
+   
+  const result= document.createElement('div');
+  result.innerText= convertedValue;
+  document.body.appendChild(result);
+ }
+//Date picker so will have due date
+const todos3 = [{
+title:'Get groceries',
+dueDate:'2021-10-04'
+},{
+title:'wash car',
+dueDate:'2021-10-20'
+},{
+title:'Make dinner',
+dueDate:'2021-10-30'
+}];
+
+function addTodo2(){
+const textbox = document.getElementById('todo-title');
+const title = textbox.value;
+
+//const datePicker = document.querySelector('.date');
+const datePicker = document.getElementById('date-picker');
+const dueDate = datePicker.value;
+// how to associate due date with each todo- to the object types
+
+todos3.push({
+  title:title, // this title on the right is from the textbox.value
+  dueDAte: dueDate // this duedate is from the object array
+}); // to create an object here
+//render();
+}
+
+todos.forEach(function (todo){// this todo is for the parameter of the object array todos
+  const element = document.createElement ('div');
+  element.innerText = todo.title +'' + todo. duedate;
+
+
+})
+//Write a function cartTotal that takes an array of objects cartArray 
+//where each object contains a name, price, and quantity. console.log 
+//the total price of the items in the cart
+
+function cartTotal(cartArray){
+  let total = 0;
+
+  cartArray.forEach(function(item){
+ total =  total +item.price * item.quantity;
+
+  })
+  console.log(total);
+}
+
+cartTotal([
+  {name: 'apple', price: 4,quantity:2},
+  {name: 'orange', price:3, quantity:3}
+]);
+
+
