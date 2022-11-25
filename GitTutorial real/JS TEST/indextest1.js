@@ -223,4 +223,34 @@ cartTotal([
   {name: 'orange', price:3, quantity:3}
 ]);
 
+//Create a <div id="receipt"></div>. Write a function 
+//displayReceipt that takes the same array of objects
 
+//id .appendchild. div
+const receipt =document.getElementById('receipt');
+
+function displayReceipt(cartArray){
+  //receipt.innerHTML = '';
+
+  cartArray.forEach(function(item){
+    const receiptLine = document.createElement('div');
+    receiptLine.innerText = item.name + '$' +item.price + '*'+ item.quantity;
+    receipt.appendChild(receiptLine);
+  });
+ // You can also calculate the total using just the loop above, but I like
+    // to separate them out so each loop does one thing.
+  let cartTotal = 0;
+  cartArray.forEach(function(item){
+    cartTotal = cartTotal + item.price * item.quantity;
+  });
+
+  const totalLine = document.createElement('div');
+  totalLine.innerText = 'Cart Total =$' + cartTotal;
+  receipt.appendChild(totalLine);
+}
+
+displayReceipt([
+  {name:'apple',price:4,quantity:2},
+  {name:'orange',price:3,quantity:3}
+])
+ 
