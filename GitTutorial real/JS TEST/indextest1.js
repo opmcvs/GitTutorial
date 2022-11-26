@@ -253,4 +253,87 @@ displayReceipt([
   {name:'apple',price:4,quantity:2},
   {name:'orange',price:3,quantity:3}
 ])
- 
+ // Reminder you can created any element under the ex.
+//todos.forEach(function (todo){
+  //delete button here
+//})
+//TO LINK THIS DELETE BUTTON TO EACH  OBJECT IN ARRAY NEED TO
+//CREATE A LINK BY iD IN oBJECT.
+const id = new Date().getTime(); // for the new add to do so they can have an Id.
+//To create a unique id by using the date.
+todos.push({
+  title:title,
+  dueDate:dueDate,
+  id:id
+});
+
+// under the render()
+ function deleteTodo(event){
+  const deleteButton = event.target;
+  const idToDelete= deleteButton.id;
+  console.log(event);// this event is checking the onclick
+ todos= todos.filter(function (todo){
+  //filter array doesn't modify the array , 
+  //it creates a copy of the array so need todos=
+  // so change the const todos to let todos
+  // if the id of this todo matches idToDelete return False
+  // for everything else return True
+if(todo.id===idToDelete){
+  return false;
+} else{
+  return true;
+}
+ });
+ //similar to forEach 
+ // if the value returns true then ok
+ // if false then take it out of the array
+ //RENDER(); TO UPDATE THE WEBPAGE
+}
+
+
+
+
+ const deleteButton= document.createElement('button');
+ deleteButton.innerText ='delete';
+ deleteButton.style = 'margin-left: 12px;';
+ //linking a style directly in js.
+ deleteButton.onclick=deleteTodo;
+ // linking an onclick in js but giving it the name of the 
+ //function rather then actually running it by adding ()
+ // because this is through the Dom or Js.
+ deleteButton.id=todo.id;// the parameter and the id of object array.
+ element.appendChild(deleteButton); 
+ // to add a delete button to all  elements-which is link
+ // to a div and create it at the end of it for each div.
+ /*get groceries delete
+   wash car      delete
+   Make dinner   delete 
+ */
+
+   //Write a function createCart that takes an object 
+   //representing prices of food.
+
+   let total =0;
+   function createCart(foodPrices){
+    const foods = Object.keys(foodPrices);
+
+
+    foods.forEach(function(food){
+      const cartItem = document.createElement('div');
+
+
+      const foodPrice = foodPrices[food];
+      cartItem.innerText = food +'$'+foodPrice;
+
+      const addButton = document.createElement('button');
+      addButton.innerText ='Add';
+
+      addButton.onClick= function (){
+        total = total + foodPrice;
+      };
+      cartItem.appendChild(addButton);
+
+      document.body.appendChild(cartItem);
+    });
+   }
+   createCart({Apple:3,Orange:4,Egg:3});
