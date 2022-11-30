@@ -32,3 +32,36 @@ function createCart(foodPrices) {
 }
 
 createCart({ Apple: 3, Orange: 4, Egg: 2 });
+
+
+function myFunction(){
+  console.log("This is it");
+}
+
+let loop = myFunction();
+function render(luke){
+ for(let i=0;i<5;i++){
+luke =i;
+}
+ return luke
+};
+
+render()
+
+console.log(render());
+
+
+
+
+
+
+
+
+//test
+function sum(numbers) {
+  let acc = 0;
+  for (let n of numbers) {
+    acc += n;
+  }
+  return acc;
+}
