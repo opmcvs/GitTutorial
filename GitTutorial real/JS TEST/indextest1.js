@@ -273,7 +273,7 @@ todos.push({
   const idToDelete= deleteButton.id;
   console.log(event);// this event is checking the onclick
  todos= todos.filter(function (todo){
-  //filter array doesn't modify the array , 
+  //filter array doesn't modify the array so need the todos(array variable name) , 
   //it creates a copy of the array so need todos=
   // so change the const todos to let todos
   // if the id of this todo matches idToDelete return False

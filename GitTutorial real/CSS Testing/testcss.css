@@ -41,7 +41,7 @@ font-weight:bold;
 font-size: 15px;
 text-align:center;
 padding-left:3px ;
-transition:all 1s;/* you can create multiple property to be tartegete in this porperty separated by a comma,*/
+transition:all 1s;/* you can create multiple property to be targeted in this porperty separated by a comma,*/
 vertical-align: top;
 }
 .tweet-button:hover{/*its a pseudo class- adds an additional style*/

@@ -34,19 +34,16 @@ function createCart(foodPrices) {
 createCart({ Apple: 3, Orange: 4, Egg: 2 });
 
 
-function myFunction(){
-  console.log("This is it");
+let mike = function myFunction(){
+  c
+}
+let mike2 =console.log(mike);
+
+function render(){
+  return (mike2);
 }
 
-let loop = myFunction();
-function render(luke){
- for(let i=0;i<5;i++){
-luke =i;
-}
- return luke
-};
-
-render()
+render();
 
 console.log(render());
 
