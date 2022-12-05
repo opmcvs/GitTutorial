@@ -33,17 +33,10 @@ function createCart(foodPrices) {
 
 createCart({ Apple: 3, Orange: 4, Egg: 2 });
 
+const mike = function myFunction(){
+  console.log("this is it");
+};
 
-let mike = function myFunction(){
-  c
-}
-let mike2 =console.log(mike);
-
-function render(){
-  return (mike2);
-}
-
-render();
 
 console.log(render());
 
