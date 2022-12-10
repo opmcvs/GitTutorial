@@ -1,0 +1,19 @@
+
+body{
+margin-left:250px;
+
+}
+
+#increment-btn{
+background-color: blue;
+border-width:10px;
+border-radius:7px;
+display: block;
+}
+
+#save-btn{
+margin-top:5px;
+margin-left:18px;
+background-color: green;
+}
+

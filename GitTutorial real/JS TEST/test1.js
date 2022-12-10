@@ -156,9 +156,4 @@ const totalOp = students.map((stu => {
 })).filter((stu) => stu.marks > 60).reduce
 ((acc,curr)=> acc + curr.marks,0);
 
-let r= document.createElement("p");
-r.innerText = "string";
-document.body.appendChild(r);
-console.log(r);
-
 
