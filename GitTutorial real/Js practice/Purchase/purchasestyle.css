@@ -1,0 +1,23 @@
+body{
+ text-align: center;   
+}
+
+.img-shoe{
+
+  height:100px;
+   width: 200px;
+  object-fit:contain;
+  object-position:center;
+  border-width:2px;
+  border-style:solid;
+  border-color:red;
+}
+
+.errorc{
+ display:none;
+ color: red;
+ font-size:xx-large;
+ cursor:pointer;
+ 
+}
+

@@ -22,12 +22,13 @@ totalLaps();
 let incrementBtn= 0;// needs to be global scope so can 
 // invoke each time click.
 const saveel=document.getElementById("save-el")
+const countel = document.getElementById("count-el")
 const saveBTN = document.getElementById("save-btn");
 
 
 function  increment() {
     incrementBtn += 1;
-    const countel = document.getElementById("count-el").innerText= incrementBtn;
+ countel.innerText= incrementBtn;
 }
 
 // function save to log out  the count when its called.
@@ -38,4 +39,8 @@ let countStr = incrementBtn +" "+ "-";
 saveel.innerText += " " + countStr;
 //.textContent gets all elements including script style.
 //why incrementBtn as already change and scope is used when manipulating.
+countel.innerText = 0 ;
+incrementBtn =0 ;
 }
+
+
