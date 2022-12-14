@@ -1,21 +1,50 @@
 // 21 wins or as close as possible above your out.
 //Ace = 11 and king = 10
-let firstCard = 11;
-let secondCard = 11;
+//querySelector.for class #for Id;
+let firstCard = 10;
+let secondCard = 4;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
+let message = "";
+let newCard = 7;
+const startBtn = document.getElementById("start-btn");
+const messageEl = document.getElementById("message-el");
+const sumEl = document.getElementById("sum-el");
+const cardsEl = document.querySelector("#cards-el");
+
+const newcardBtn=document.getElementById("newcard-btn");
+ 
 //ALWAYS KEEP IN MIND THE LESS FACTOR 
+
+    message = ("You're out of the game");
+    isAlive = false;
+startBtn.addEventListener("click",  startGame);
+function startGame() {
+cardsEl.textContent = `Cards: ${firstCard} & ${secondCard}`;   
+//cardsEl.textContent+= `${firstCard} & ${secondCard}`;
+// if you won't do this it will repeat the value in the 
+//newCard funcion 
+//sumEl.textContent+=sum;
+sumEl.textContent= "Sum:"+ sum;
+
 if (sum<=20){
-    console.log("Do you want to draw a new card")
+    message = ("Do you want to draw a new card")
 }else if(sum === 21){
-    console.log("You won")
+    message = ("You won")
     hasBlackJack = true  
 }else {
-    console.log("You're out of the game");
+    message = ("You're out of the game");
     isAlive = false;
 }
 
-console.log(hasBlackJack);
-console.log(isAlive);
+messageEl.textContent = message;
+}
 
+newcardBtn.addEventListener("click",()=>{
+    
+    sum += newCard;
+    startGame();
+    console.log("newCard");
+})
+    
