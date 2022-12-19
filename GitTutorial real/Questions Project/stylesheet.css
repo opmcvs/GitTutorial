@@ -7,7 +7,6 @@
 }
 
 
-
 .question-btn{
     font-size: 1.5rem;
     background: transparent;
@@ -16,8 +15,7 @@
     color: var(--clr-gold);
     transition:var(--transition);
     margin-left: 400px;
-    
-}
+    }
 
 .question-btn:hover{
     transform:rotate(90deg);
@@ -26,13 +24,11 @@
 }
 
 
-
 .question-text {
     
     padding:1rem 0 1.5rem 0;
     border-bottom: 10px solid rgba(0,0,0,0.2);
     transition:border-bottom 2s;
-    
     
 }
 
