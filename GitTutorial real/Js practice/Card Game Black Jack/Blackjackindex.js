@@ -75,15 +75,100 @@ newCardBtn.addEventListener("click", function newCard(){
    }
 })
 
+//practice
+let person = {
+  name: "master",
+  age: 38,
+  country: "USA"
 
+}
+function logData(){
+    console.log(`${person.name} is ${person.age} and lives in ${person.country}`)
+}
+logData();
 
+//practice
+const age = 65;
+function getAge(){
+if(age < 6 ){
+    console.log("Free")
+}else if(age >= 6 && age <= 17){
+    console.log("child discount")
+}else if(age >= 18 && age <=65){
+    console.log("full price")
+}else {
+    console.log("Senior citizen discount")
+}
+}
+ console.log(getAge());
 
+ //practice
+ const largeCountries = ["Russia","India","USA","Indonesia","Pakistan"]
+ 
+ function countries(){
+ for (let i = 0; i < largeCountries.length; i++){
+     
+    console.log("This is the largest countries in the world"+"-"+
+    largeCountries[i])
+ }
+}
+console.log(countries());
 
+const large = "Om"
+let newName = "";
+ 
+ function countries1(){
+ for (let i = 0; i < 7; i++){
+     newName = large[i];
+     
+    console.log("This is my name"+"-"+
+    newName)
+ }
+}
+console.log(countries1());
+//practice
+let largeCountries1 = ["Tuvalu","India","USA","Indonesia","Monaco"];
 
+largeCountries1.pop();
+largeCountries1.push("Pakistan");
+largeCountries1.shift("Tuvalu");
+largeCountries1.unshift("China");
+console.log(largeCountries1);
 
+//Practice
+let date = new Date();
+function getDate(){
+if(date === "Friday" && date === 13){
+    console.log("this is scary")
+}else{
+    console.log("It's a normal day")
+}
+}
+getDate();
 
+//Practice
+/*let hands = ["rock","paper","scissor"];
+let stringArray ="" ;
+let outPutGame ="";
 
+function randomHand(){
+outPutGame = Math.floor(Math.random()*hands.length);
+if(outPutGame === 0){
+    return stringArray = "rock"
+}else if(outPutGame === 1){
+     return stringArray = "paper"
+}else{
+    return stringArray= "scissor"
+}
+}
+randomHand();*/
 
+let hands = ["rock","paper","scissor"];
+function getHand(){
+    let randomIndex = Math.floor(Math.random()*3)
+    return hands[randomIndex]
+}
+console.log(getHand());
 
 
 
