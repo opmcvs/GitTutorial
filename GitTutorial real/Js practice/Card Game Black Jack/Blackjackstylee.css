@@ -50,7 +50,20 @@ font-style:italic;
   border: none;
 }
 
+#apple-shelf{
+margin-left:180px;  
+width:300px;
+background-color:red;
+border-radius:20px;
 
+}
+#orange-shelf {
+margin-top:20px; 
+margin-left: 180px;
+width:300px;
+border-radius:20px;
+background-color:orange;
+}
 
 
 

@@ -170,9 +170,32 @@ function getHand(){
 }
 console.log(getHand());
 
+//Pratice
+let fruits = ["apple","orange","apple","apple","orange"];
 
+const appleShelf = document.getElementById("apple-shelf");
+const orangeShelf = document.getElementById("orange-shelf");
 
+/*function putShelf(fruit){
+    for (let i =0; i < fruit.length; i++){
+    if(fruit[i] === "apple"){
+     appleShelf.textContent += "apple"
+    }else{
+      orangeShelf.textContent += "orange"  
+    }
+    }
+}*/
 
+//practice forEach same scenario as above
+fruits.forEach (sorfruit);
+
+function sorfruit(fruit){
+if(fruit === "apple"){
+     appleShelf.textContent += "apple"
+    }else{
+      orangeShelf.textContent += "orange"  
+    }
+}
 
 
 
