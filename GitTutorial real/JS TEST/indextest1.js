@@ -212,7 +212,7 @@ function cartTotal(cartArray){
   let total = 0;
 
   cartArray.forEach(function(item){
- total =  total +item.price * item.quantity;
+ total += +item.price * item.quantity;
 
   })
   console.log(total);
@@ -222,6 +222,18 @@ cartTotal([
   {name: 'apple', price: 4,quantity:2},
   {name: 'orange', price:3, quantity:3}
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Create a <div id="receipt"></div>. Write a function 
 //displayReceipt that takes the same array of objects
