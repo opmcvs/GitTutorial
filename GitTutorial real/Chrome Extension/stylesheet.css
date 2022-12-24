@@ -1,19 +1,40 @@
-.div-el > #ul-el{
+.div-el > #ul-el,.input-btndiv{
     margin-top: 30px;
     display:flex;
     justify-content:center;
+    
     font-family: Arial, Helvetica, sans-serif;
     flex-wrap: wrap;
     
 }
 
-#input-btn{
+ .input-btndiv{
+ margin-top:20px;
+ border:none;
+ 
+ background-color: green;
+ color: white;
+ width:25%;
+ justify-content: center;
+margin-left:300px;
+ }
+
+ 
+
+
+
+
+
+
+
+/*#input-btn{
     margin-top:20px;
     border:none;
     background-color: green;
     color: white;
     width:25%;
-}
+    justify-content: center;
+}*/
 
 #input-el{
     margin-right:10px;
@@ -26,7 +47,8 @@
     and the padding added*/
 }
 .div-test1{
-  margin-top:500px;  
+  margin-top:500px; 
+  margin-bottom:50px; 
   background-color: aqua;  
   margin-left:100px;
   width:20%;

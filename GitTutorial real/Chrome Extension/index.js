@@ -49,16 +49,26 @@ function lookpar (look){
 lookpar();
 
 //Practice
-const containerEl = document.getElementById("container-el").
-innerHTML = `<button>Buy!</button>`;
-//containerEl.innerHTML = `<button>Buy!</button>`;
+//const containerEl = document.getElementById("container-el").
+//innerHTML = `<button>Buy!</button>`;
+// or containerEl.innerHTML = `<button>Buy!</button>`;
+
+//practice
+/*const containerEl = document.getElementById("container-el")
+//innerHTML = `<button ${onclick = 'buy()'}>Buy!</button>`;
+containerEl.innerHTML = "<button onclick='buy()'>Buy!</button>";
+
+function buy(){
+    containerEl.innerHTML += "<p>thank you</P>"
+}*/
 
 
+const containerEl = document.getElementById("container-el")
+containerEl.innerHTML = `<button onclick ='buy()'>Buy!</button>`;
 
-
-
-
-
+function buy(){
+    containerEl.innerHTML += '<p>thank you !</P>';
+}
 
 
 
