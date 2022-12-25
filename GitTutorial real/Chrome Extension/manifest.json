@@ -1,0 +1,9 @@
+{
+    "manifest_version": 3,
+    "version": "1.5",
+    "name": "Website tracker",
+    "action": {
+        "default_popup": "indexhtml.html",
+        "default_icon": "dollar pic.png"
+    }
+}

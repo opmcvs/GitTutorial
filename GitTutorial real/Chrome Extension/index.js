@@ -1,22 +1,89 @@
-let myLeads = ["www.awesome.com","www.power.com","www.school.com"];
+let myLeads = [];
+/*let myLeads = `["www.omtest.com"]`;
+//1.turn the myLeads string into array.
+myLeads = JSON.parse(myLeads);
+//2.push a new value to the array.
+myLeads.push("www.lead2.com");
+//3. Turn the array inot a string again
+myLeads = JSON.stringify(myLeads);
+//4.console.log the string using  typeof to verify
+console.log(typeof myLeads);*/
 const inputBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
+//get the leads form the local storage
+let leadsFromLocalStorage =JSON.parse(localStorage.getItem("myLeads")) ;
+console.log(leadsFromLocalStorage);
 
-inputBtn.addEventListener("click",function saveLead(){
-     myLeads.push(inputEl.value );
-    
-    //inputBtn.value = myLeads.push();
-    console.log(myLeads);
-} )
-
+inputBtn.addEventListener("click",function (){
+   myLeads.push(inputEl.value );
+  //ulEl.textContent = "";  
+  //resets the input value
   
+//save the myLeads array to local storage
+//localStroage.setItem("myLeads",JSON.stringify(myLeads));
+localStorage.setItem("myLeads",JSON.stringify(myLeads));
+
+ 
+
+
+   renderLeads()
+   //inputBtn.value = myLeads.push();
+   //to verify that it works the local storage
+   //console.log(localStorage.getItem("myLeads"));
+ console.log(myLeads);
+   })
+
+function renderLeads(){
+let listItems = "";
 for (let i = 0; i < myLeads.length; i++){
-    ulEl.innerHTML += "<li> " + myLeads[i] +"</li>";
-    }
+//ulEl.innerHTML += "<li> " + myLeads[i] +"</li>";
+// when you add <ul> to <li> like <ul><li> creates more space
+    
+// the other way instead of innerHTML is .createElement("li")
+//const li = document.createElement("li");
+//li.textContent = myLeads[i];
+//ulEl.append(li);
+  listItems  += `
+  <li> 
+  <a target='_blank' href='${myLeads[i]}'> ${myLeads[i]} 
+  </a> 
+  </li>`
+  // without the + sign in listItems += to avoid the repetition 
+  console.log(listItems);
+}
+//out side of for loop because DOM manipulation comes with a cost.
+ulEl.innerHTML = listItems;
+}
+
+    
+   
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// Inserting a Node object
+//const parent = document.createElement('div');
+//const child = document.createElement('p');
+//parent.append(child);
+
+// This appends the child element to the div element
+// The div would then look like this <div><p></p></div>
+
+// Inserting a DOMString
+//const parent = document.createElement('div');
+//.append('Appending Text');
+// The div would then look like this <div>Appending Text</div>
 
 
 
@@ -71,8 +138,24 @@ function buy(){
 }
 
 
+//practice template strings or literals
+// big benefit is break code into multiple lines.
+// a \ to escape template strings even $
+// to output in online use \
+const recipient = "James";
+const sender = "Om king";
+const email = `Hey \ 
+${recipient} ! \ 
+How is it going? Cheers \
+${sender}\. `;
+console.log(email);
 
-
+//practice .json file
+/*localStorage.setItem("idol","www.omking.com");
+localStorage.getItem("idol");
+localStorage.clear();
+console.log(localStorage);*/
+ 
 
 
 

@@ -1,3 +1,6 @@
+body{
+    min-width:400px;
+}
 .div-el > #ul-el,.input-btndiv{
     margin-top: 30px;
     display:flex;
@@ -5,7 +8,7 @@
     
     font-family: Arial, Helvetica, sans-serif;
     flex-wrap: wrap;
-    
+    min-width: 400px;
 }
 
  .input-btndiv{
@@ -53,3 +56,11 @@ margin-left:300px;
   margin-left:100px;
   width:20%;
 }
+
+ul,li, a{
+margin-top:5px;    
+color:green;
+list-style-type: none;
+padding-left:0;
+}
+
