@@ -15,6 +15,11 @@ const ulEl = document.getElementById("ul-el");
 let leadsFromLocalStorage =JSON.parse(localStorage.getItem("myLeads")) ;
 console.log(leadsFromLocalStorage);
 
+if (leadsFromLocalStorage){
+myLeads = leadsFromLocalStorage;
+renderLeads();
+}
+
 inputBtn.addEventListener("click",function (){
    myLeads.push(inputEl.value );
   //ulEl.textContent = "";  
@@ -22,12 +27,9 @@ inputBtn.addEventListener("click",function (){
   
 //save the myLeads array to local storage
 //localStroage.setItem("myLeads",JSON.stringify(myLeads));
+inputEl.value = "";
 localStorage.setItem("myLeads",JSON.stringify(myLeads));
-
- 
-
-
-   renderLeads()
+renderLeads()
    //inputBtn.value = myLeads.push();
    //to verify that it works the local storage
    //console.log(localStorage.getItem("myLeads"));
@@ -56,9 +58,23 @@ for (let i = 0; i < myLeads.length; i++){
 ulEl.innerHTML = listItems;
 }
 
-    
-   
 
+//Truthy 
+//const credits = 0
+//if ("yolo")// this considered true because its a string 
+//[0]= is true because its an array
+
+//Falsy
+ //const credits = 0
+//if (0)   //o is considered falsy
+
+//if ("")//empty string
+//the following are falsy values
+//false, 0, "",null-how developer signalize emptiness,
+//undefined-how Javascript signalizes emptiness or declared but no value , Nan
+   
+//To check if truthy or falsy
+//Boolean("data here")
 
 
 
