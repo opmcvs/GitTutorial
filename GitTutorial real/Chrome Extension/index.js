@@ -11,13 +11,14 @@ console.log(typeof myLeads);*/
 const inputBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
+const deleteBtn = document.getElementById("delete-btn");
 //get the leads form the local storage
-let leadsFromLocalStorage =JSON.parse(localStorage.getItem("myLeads")) ;
+const leadsFromLocalStorage =JSON.parse(localStorage.getItem("myLeads")) ;
 console.log(leadsFromLocalStorage);
 
 if (leadsFromLocalStorage){
 myLeads = leadsFromLocalStorage;
-renderLeads();
+render(myLeads);
 }
 
 inputBtn.addEventListener("click",function (){
@@ -29,16 +30,16 @@ inputBtn.addEventListener("click",function (){
 //localStroage.setItem("myLeads",JSON.stringify(myLeads));
 inputEl.value = "";
 localStorage.setItem("myLeads",JSON.stringify(myLeads));
-renderLeads()
+render(myLeads)
    //inputBtn.value = myLeads.push();
    //to verify that it works the local storage
    //console.log(localStorage.getItem("myLeads"));
  console.log(myLeads);
    })
 
-function renderLeads(){
+function render(leads){
 let listItems = "";
-for (let i = 0; i < myLeads.length; i++){
+for (let i = 0; i < leads.length; i++){
 //ulEl.innerHTML += "<li> " + myLeads[i] +"</li>";
 // when you add <ul> to <li> like <ul><li> creates more space
     
@@ -48,7 +49,7 @@ for (let i = 0; i < myLeads.length; i++){
 //ulEl.append(li);
   listItems  += `
   <li> 
-  <a target='_blank' href='${myLeads[i]}'> ${myLeads[i]} 
+  <a target='_blank' href='${leads[i]}'> ${leads[i]} 
   </a> 
   </li>`
   // without the + sign in listItems += to avoid the repetition 
@@ -58,6 +59,13 @@ for (let i = 0; i < myLeads.length; i++){
 ulEl.innerHTML = listItems;
 }
 
+
+deleteBtn.addEventListener("dblclick",function(){
+localStorage.clear();
+myLeads = [];
+render(myLeads);
+
+})
 
 //Truthy 
 //const credits = 0
