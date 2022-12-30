@@ -5,5 +5,7 @@
     "action": {
         "default_popup": "indexhtml.html",
         "default_icon": "dollar pic.png"
-    }
+    },
+
+    "permissions": ["tabs"]
 }

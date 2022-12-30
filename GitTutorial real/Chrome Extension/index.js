@@ -12,6 +12,9 @@ const inputBtn = document.getElementById("input-btn");
 const inputEl = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
+const tabBtn = document.getElementById("tab-btn");
+
+
 //get the leads form the local storage
 const leadsFromLocalStorage =JSON.parse(localStorage.getItem("myLeads")) ;
 console.log(leadsFromLocalStorage);
@@ -20,6 +23,24 @@ if (leadsFromLocalStorage){
 myLeads = leadsFromLocalStorage;
 render(myLeads);
 }
+
+tabBtn.addEventListener("click",function(){
+
+  //chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+chrome.tabs.query({active:true, currentWindow:true},function(tabs){
+//console.log(tabs[0].url);
+ // tabBtn.innerHTML = tabs;
+ myLeads.push(tabs[0].url);
+ localStorage.setItem("myLeads",JSON.stringify(myLeads));
+ render(myLeads);
+})
+  
+})
+
+
+
+
+
 
 inputBtn.addEventListener("click",function (){
    myLeads.push(inputEl.value );
@@ -196,3 +217,41 @@ const divTest1 = document.querySelector(".div-test1");
 divTest1.addEventListener("click",function openBox(){
     divTest1.textContent = "I have open the box";
 })
+
+//practice
+//const welcomeEl = document.getElementById("welcome-el");
+
+//function greetUser(greeting,name){
+//welcomeEl.textContent = `${greeting} ${name}`; 
+
+//}
+//greetUser("Howdie", "Om");
+
+function add(num1,num2){
+  return num1+num2;
+
+}
+console.log(add(3,4));
+console.log(add(9,102));
+
+
+
+function getFirst(arr){
+return arr[0];
+}
+let firstCard = getFirst(["mike","luke"])
+console.log(firstCard);
+
+//fistbuzz
+for (let i=1; i<100; i++){
+  if(i % 3 === 0 && i % 5 ===0){
+    console.log("FizzBuzz");
+ } else if (i % 3 === 0){
+    console.log("fizz");
+ }else if (i % 5 === 0){
+  console.log("Buzz");
+ }else{
+  console.log(i);
+ }
+}
+
