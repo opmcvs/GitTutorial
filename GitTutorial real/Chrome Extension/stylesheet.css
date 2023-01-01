@@ -108,3 +108,10 @@ padding-left:0;
     display: inline-block;
     /* additional code */
 }
+
+#score-btn{
+    background-color: blue;
+    color:brown;
+    font-weight:bolder;
+    
+}

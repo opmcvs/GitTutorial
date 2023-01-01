@@ -37,27 +37,6 @@ chrome.tabs.query({active:true, currentWindow:true},function(tabs){
   
 })
 
-
-
-
-
-
-inputBtn.addEventListener("click",function (){
-   myLeads.push(inputEl.value );
-  //ulEl.textContent = "";  
-  //resets the input value
-  
-//save the myLeads array to local storage
-//localStroage.setItem("myLeads",JSON.stringify(myLeads));
-inputEl.value = "";
-localStorage.setItem("myLeads",JSON.stringify(myLeads));
-render(myLeads)
-   //inputBtn.value = myLeads.push();
-   //to verify that it works the local storage
-   //console.log(localStorage.getItem("myLeads"));
- console.log(myLeads);
-   })
-
 function render(leads){
 let listItems = "";
 for (let i = 0; i < leads.length; i++){
@@ -80,13 +59,36 @@ for (let i = 0; i < leads.length; i++){
 ulEl.innerHTML = listItems;
 }
 
-
 deleteBtn.addEventListener("dblclick",function(){
 localStorage.clear();
 myLeads = [];
 render(myLeads);
 
 })
+
+
+
+
+
+inputBtn.addEventListener("click",function (){
+   myLeads.push(inputEl.value );
+  //ulEl.textContent = "";  
+  //resets the input value
+  
+//save the myLeads array to local storage
+//localStroage.setItem("myLeads",JSON.stringify(myLeads));
+inputEl.value = "";
+localStorage.setItem("myLeads",JSON.stringify(myLeads));
+render(myLeads)
+   //inputBtn.value = myLeads.push();
+   //to verify that it works the local storage
+   //console.log(localStorage.getItem("myLeads"));
+ console.log(myLeads);
+   })
+
+
+
+
 
 //Truthy 
 //const credits = 0
@@ -254,4 +256,186 @@ for (let i=1; i<100; i++){
   console.log(i);
  }
 }
+
+//Practice write a function that takes any number of 
+//arguments and returns the sum  of all arguments
+
+
+function func() {
+  console.log(arguments);
+  let sum = 0
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  console.log(sum)
+  return sum;
+}
+func(3,4,5,6,);
+
+//Or
+
+function add(...args){// spreads it in an array
+  return args.reduce(function(acc, cur){
+    return acc+ cur;
+  } )
+}
+console.log(add(3,4,8));
+//0r
+
+function sumTot(...args){
+  // can be function sumTot(a, b,...args){
+  // where a is 3, b is 4 and an args array  
+  let sum = 0;
+  for(let i = 0; i<args.length; i++){
+   sum += args[i];
+
+  }
+  return sum;
+  
+}
+console.log(sumTot(3,4,5,6));
+
+//write a function that takes  two strings A and B
+//returns whether b is in a in  a case-insensitive way
+
+function stringL(string1,string2){
+let stringCheck = string1.toLowerCase();
+return stringCheck.includes(string2.toLowerCase());
+}
+
+console.log(stringL("What is this","what"));
+
+//Write a function that takes an array of objects and 
+//returns an array  of the objects "none" only if the property 
+//exists.
+
+/*function getNames(param){
+ let result = [];
+ 
+ for (let i = 0; i<param.length; i++){
+  result.push(param[i].name);
+ }
+ return totalS;
+}
+console.log(getNames([
+ {name:"luke",age: 24,name:"mike"} 
+]
+
+));*/
+
+function getNames(param){
+ let result = [];
+ 
+ for (let i = 0; i<param.length; i++){
+  if(param[i].hasOwnProperty("name")){
+  result.push(param[i].name);
+ }
+}
+ return result;
+}
+console.log(getNames([
+ {name:"luke",age: 24,name:"mike"} 
+]
+
+));
+
+// practice  let and const template string
+const player = "Per";
+const  opponent = "Nick";
+const  game = "Amazing Fighther";
+let  points = 0;
+let  hasWon = false;
+
+//playing the game
+points += 100;
+hasWon = true;
+
+//Announcing the winner
+if (hasWon){
+  console.log(`${player} got ${points} points and won the ${game} game.`);
+}else {
+  console.log(`The winner is ${opponent} ! ${player} lost the game`);
+}
+
+//practice array
+let myCourses = ["Learn CSS","UI design","Intro to clean Code"];
+
+/*function showArray(array){
+let renderArray = [];
+for (let i=0; i<array.length; i++){
+  renderArray += array[i];
+}
+return renderArray;
+}
+console.log(showArray(myCourses));*/
+
+function showArray(array){
+
+for (let i=0; i<array.length; i++){
+  console.log(array[i]);
+}
+
+}
+showArray(myCourses);
+
+// practice saving to local storage.
+
+const nameArr = ["weird","power"];
+localStorage.setItem("starKey",JSON.stringify(nameArr));
+
+JSON.parse(localStorage.getItem("starKey"));
+
+//Practice fetch the button add eventlistener 
+//Log Janes score 
+
+let data = [
+  { player:"Jane",
+    score : 52
+
+ },
+ { player:"Mark",
+    score : 41
+
+}
+]
+
+const scoreBtn = document.getElementById("score-btn");
+
+scoreBtn.addEventListener("click",function(){
+console.log(data[0].score)
+})
+
+//Practice it should return  the description and array
+let valueLoop = [];
+function generateSentence(desc,arr){
+  const lastIndex = arr.length -1;
+  for (let i=0;i<arr.length; i++ ){
+    if(i===lastIndex){
+      valueLoop += arr[i];
+    }else {
+      valueLoop += arr[i] + " , ";
+    }
+} 
+ 
+ console.log(`The ${arr.length}${desc} are ${valueLoop} ` ) 
+}
+  
+generateSentence(" largest Countries",["China","USA","India"]);
+
+function generateSentence(desc,arr){
+let baseString = `The ${arr.length}${desc} are`;
+const lastIndex =arr.length -1;
+for(let i=0; i<arr.length; i++){
+  if(i === lastIndex){
+    baseString += arr[i]
+  }else{
+    baseString += arr[i] + " ,"
+  }
+}
+
+return baseString
+}
+
+const sentence = generateSentence("largest countries",["USA","India","China"]);
+console.log(sentence);
 
