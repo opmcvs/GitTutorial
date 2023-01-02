@@ -1,0 +1,29 @@
+.title{
+    text-align:center;
+    text-decoration:underline;
+    text-decoration-color: rgb(194, 46, 46);
+    line-height: 2.00;
+}
+
+.section-center{
+    display:grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 1fr 2fr;
+}
+
+.menu-item{
+ display:grid;
+ gap:1fr 2fr;
+
+}
+
+.photo{
+    object-fit:cover;
+    height:200px;
+    
+    border-style:dotted;
+    border-color: rgb(218, 64, 9);
+   
+    border:50px;
+    border-radius:5px;
+}
