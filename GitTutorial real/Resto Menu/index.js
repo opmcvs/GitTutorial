@@ -17,7 +17,7 @@ const menu = [
         title:"waffle hearts",
         category:"breakfast",
         price:15.99,
-        img:"Menu-pics//waffle-hearts-2697904__340.jpg",
+        img:"Menu-pics/waffle-hearts-2697904__340.jpg",
         desc:`These little tickers hide a deeply tasty secret: 
         They're actually pockets made from store-bought puff 
         pastry that are stuffed with chocolate-hazelnut spread. 
@@ -30,7 +30,7 @@ const menu = [
         title:"Macarons",
         category:"desert",
         price:13.99,
-        img:"Menu-pics\macarons-2548827__340.jpg",
+        img:"Menu-pics/macarons-2548827__340.jpg",
         desc:`A macaron is a French pastry composed of two 
         shells and a filling in the middle. The shells are
          made with almond flour, egg white and sugar. The 
@@ -42,7 +42,7 @@ const menu = [
         title:"cake",
         category:"Desert",
         price:18.99,
-        img:"Menu-pics\cake-1971552__340.jpg",
+        img:"Menu-pics/cake-1971552__340.jpg",
         desc:`Tiramisu is an elegant and rich layered 
         Italian dessert made with delicate ladyfinger 
         cookies, espresso or instant espresso, mascarpone 
@@ -53,7 +53,7 @@ const menu = [
         title:"hamburger",
         category:"lunch",
         price:22.99,
-        img:"Menu-pics\hamburger-494706__340.jpg",
+        img:"Menu-pics/hamburger-494706__340.jpg",
         desc:`Hamburgers are traditionally made with ground
          beef and served with onions, tomatoes, lettuce, 
          ketchup, and other garnishes.`
@@ -63,7 +63,7 @@ const menu = [
         title:"Salmon",
         category:"lunch",
         price:23.99,
-        img:"Menu-pics\salmon-518032__340.jpg",
+        img:"Menu-pics/salmon-518032__340.jpg",
         desc:`Grilled salmon is salmon that has been 
         cooked over coals or a gas flame and is one 
         of the oldest fish preparations known. `
@@ -76,5 +76,26 @@ const sectionCenter = document.querySelector
 (".section-center");
 
 window.addEventListener('DOMContentLoaded',()=>{
-console.log("shake and bake");
+// console.log("shake and bake");
+let displayMenu = menu.map( (item)=>{ 
+    console.log(item);
+    // return `<h1>${item}</h1>`;
+   return `<article class="menu-item">
+          <img src=${item.img}  
+          class="photo" alt=${item.title}>
+          <div class ="item-info">
+            <header>
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+            </header>
+            <P class="item-text">
+            ${item.desc}
+            </P>
+          </div>
+        </article>`
+})
+displayMenu = displayMenu.join(''); 
+// to avoid commas in between the <article>
+sectionCenter.innerHTML = displayMenu;
+console.log(displayMenu);
 })
