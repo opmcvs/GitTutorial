@@ -19,8 +19,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 50px;
-        column-gap: 40px;
-        justify-items: center;
+    column-gap: 40px;
+    justify-items: center;
 }
 
 .menu-item {
