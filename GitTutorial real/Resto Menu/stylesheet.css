@@ -6,8 +6,30 @@ main {
     place-items: center;
 }
 
+body{
+display:flex;
+min-width : 800px;
+
+}
+.title {
+    display: block;
+    text-align: center;
+    line-height: 2.00;
+    /* margin-right: -500px; */
 
 
+
+}
+.underline {
+    width: 45px;
+    height: 3px;
+    background: gold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    margin-bottom: 20px;
+
+}
 
 
 .menu {

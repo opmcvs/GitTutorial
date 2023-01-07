@@ -74,7 +74,10 @@ const menu = [
 // the items
 const sectionCenter = document.querySelector
 (".section-center");
+const filterBtns = document.querySelectorAll('.filter-btn');
+const allBTn = document.getElementById('all-btn');
 
+// loading items here
 window.addEventListener('DOMContentLoaded',()=>{
     displayMenuItems(menu)// so everything will still work as it need to load
 // console.log("shake and bake");
@@ -100,6 +103,14 @@ window.addEventListener('DOMContentLoaded',()=>{
 // to avoid commas in between the <article>
 //sectionCenter.innerHTML = displayMenu;
 //console.log(displayMenu);
+})
+// filter through the menu 
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click',function (e) {
+  console.log(e.currentTarget.dataset);
+// this can be also done this way by using an id
+// console.log(e.currentTarget.allBtn);
+}) 
 })
 
 function displayMenuItems(menuItems){
