@@ -36,7 +36,9 @@ min-width : 800px;
     padding: 5rem 0;
 }
 
-
+.btn-container{
+    text-align: center;
+}
 .section-center {
     display: grid;
     grid-template-columns: 1fr 1fr;

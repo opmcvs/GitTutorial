@@ -28,7 +28,7 @@ const menu = [
     {
         id:3,
         title:"Macarons",
-        category:"desert",
+        category:"dessert",
         price:13.99,
         img:"Menu-pics/macarons-2548827__340.jpg",
         desc:`A macaron is a French pastry composed of two 
@@ -40,7 +40,7 @@ const menu = [
     {
         id:4,
         title:"cake",
-        category:"Desert",
+        category:"dessert",
         price:18.99,
         img:"Menu-pics/cake-1971552__340.jpg",
         desc:`Tiramisu is an elegant and rich layered 
@@ -75,7 +75,7 @@ const menu = [
 const sectionCenter = document.querySelector
 (".section-center");
 const filterBtns = document.querySelectorAll('.filter-btn');
-const allBTn = document.getElementById('all-btn');
+
 
 // loading items here
 window.addEventListener('DOMContentLoaded',()=>{
@@ -107,9 +107,23 @@ window.addEventListener('DOMContentLoaded',()=>{
 // filter through the menu 
 filterBtns.forEach(function(btn){
   btn.addEventListener('click',function (e) {
-  console.log(e.currentTarget.dataset);
+//   console.log(e.currentTarget.dataset.id);
+    const category =e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function(menuItem){
+        console.log(menuItem.category);
+        if(menuItem.category === category){
+     return menuItem;
+        }
+    });
+    console.log(menuCategory);
+    if(category === 'all'){
+        displayMenuItems(menu);
+    }else{
+        displayMenuItems(menuCategory);
+    }
+
 // this can be also done this way by using an id
-// console.log(e.currentTarget.allBtn);
+// console.log(e.currentTarget.allBtn)its an id;
 }) 
 })
 
