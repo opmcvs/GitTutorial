@@ -45,6 +45,9 @@ convert(24);
 let todos= ['get groceries','wash car','make dinner' ]
 todos.push('another todo');//to add to the array in the last.
 todos.pop(); // removes the last array.
+// Array before unshift: Red,Blue,Orange
+// > Array after unshift : Black,Green,Red,Blue,Orange
+
 
 todos.forEach(function(todoTitle) {
 const element= document.createElement('div');
@@ -64,6 +67,12 @@ function loUpper(stringArr) {
   console.log(result);
 }
 loUpper(['hello', 'world']);
+
+
+
+
+
+
 
 //prints out 2 times bark bark and meow meow
 function arrayDouble(sam){
@@ -225,8 +234,14 @@ cartTotal([
 
 
 
+//IIFE example 
 
-
+const tentFb = (function fib(n){
+  if(n <2){
+    return n
+  }
+  return fib(n-1) + fib(n-2)
+}) (10);
 
 
 

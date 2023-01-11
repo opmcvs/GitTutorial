@@ -74,7 +74,9 @@ const menu = [
 // the items
 const sectionCenter = document.querySelector
 (".section-center");
-const filterBtns = document.querySelectorAll('.filter-btn');
+// const filterBtns = document.querySelectorAll('.filter-btn');
+//  move to const categoryBtns = categories
+const container = document.querySelector(".btn-container");
 
 
 // loading items here
@@ -103,7 +105,58 @@ window.addEventListener('DOMContentLoaded',()=>{
 // to avoid commas in between the <article>
 //sectionCenter.innerHTML = displayMenu;
 //console.log(displayMenu);
+
+// FOR DYNAMIC BUTTONS START HERE
+// // const categories = menu.map((item)=>{
+// //     return item.category
+// }); this is just to show the step
+displayMenuButtons();
+
+const categories = menu.reduce((values, item)=>{
+ // to select only unique for additional items menu 
+if(!values.includes(item.category)){
+    values.push(item.category);
+}
+ return values  
+},['all']);//return a value as all is not a category
+
+const categoryBtns = categories.map(function(category){
+   return `<button class ="filter-btn" type= "button"
+   data-id = ${category}> ${category}</button>` 
+}).join("");
+ container.innerHTML = categoryBtns;
+ const filterBtns = document.querySelectorAll('.filter-btn');
+//  can replace document with container .querySelectorALL
+
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click',function (e) {
+//   console.log(e.currentTarget.dataset.id);
+    const category =e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function(menuItem){
+        console.log(menuItem.category);
+        if(menuItem.category === category){
+     return menuItem;
+        }
+    });
+    console.log(menuCategory);
+    if(category === 'all'){
+        displayMenuItems(menu);
+    }else{
+        displayMenuItems(menuCategory);
+    }
+
+// this can be also done this way by using an id
+// console.log(e.currentTarget.allBtn)its an id;
+}) 
 })
+
+console.log(categories);
+})
+
+
+
+
+
 // filter through the menu 
 filterBtns.forEach(function(btn){
   btn.addEventListener('click',function (e) {
@@ -149,3 +202,53 @@ displayMenu = displayMenu.join('');
 // to avoid commas in between the <article>
 sectionCenter.innerHTML = displayMenu;
 }
+
+
+
+
+
+function displayMenuButtons(){
+const categories = menu.reduce((values, item)=>{
+ // to select only unique for additional items menu 
+if(!values.includes(item.category)){
+    values.push(item.category);
+}
+ return values  
+},['all']);//return a value as all is not a category
+
+const categoryBtns = categories.map(function(category){
+   return `<button class ="filter-btn" type= "button"
+   data-id = ${category}> ${category}</button>` 
+}).join("");
+ container.innerHTML = categoryBtns;
+ const filterBtns = document.querySelectorAll('.filter-btn');
+//  can replace document with container .querySelectorALL
+
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click',function (e) {
+//   console.log(e.currentTarget.dataset.id);
+    const category =e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function(menuItem){
+        console.log(menuItem.category);
+        if(menuItem.category === category){
+     return menuItem;
+        }
+    });
+    console.log(menuCategory);
+    if(category === 'all'){
+        displayMenuItems(menu);
+    }else{
+        displayMenuItems(menuCategory);
+    }
+
+// this can be also done this way by using an id
+// console.log(e.currentTarget.allBtn)its an id;
+}) 
+})
+
+console.log(categories);
+}
+
+
+
+
