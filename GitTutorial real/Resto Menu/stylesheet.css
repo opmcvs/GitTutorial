@@ -5,8 +5,11 @@ main {
 }
 
 body {
+    
     display: flex;
     min-width: 800px;
+    width:1000px;
+    padding-top: 10px;
 
 }
 
@@ -33,7 +36,10 @@ body {
 
 
 .menu {
-    padding: 5rem 0;
+    /* padding: 80px 0; */
+    padding-top: 10px;
+    height:1600px;
+    
 }
 
 .btn-container {

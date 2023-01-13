@@ -8,22 +8,36 @@ for (const x of name) {
 }
 document.getElementById("par").innerHTML = text;
 
+
+
+
+
 function square(num){
   return num+ num;
 }
+
+
 
 function displaySquare(fn){
 //return ("this is the answer"+ (5))
  // return (`this is the answer    ${5}`);
   return ("this is the answer"+ fn(5)); 
 }
-console.log(displaySquare(square));
+
+
+
+
+
 
 (function (x){ //IIFE and closures
   return(function (y){
     console.log(x);
   })(3);
 })(7);
+
+
+
+
 
 class Car {
   constructor(name, year) {
@@ -68,6 +82,7 @@ const add = (function () {
 function myFunction(){
   document.getElementById("demo").innerHTML = add();
 }
+
 /*Example Explained
 The variable add is assigned to the return value of a self-invoking function.
 
@@ -89,12 +104,21 @@ return num *3;
 })
 console.log(multiplyThree);
 
+
+
+
+
 //filter
 const nums1 = [1,2,3, 4];
 const moreThanTwo = nums1.filter((num1)=>{
 returns >2
 })
 console.log(nums1);
+
+
+
+
+
 
 //REduce 
 const nums2 = [1,2,3, 4];
@@ -155,5 +179,92 @@ const totalOp = students.map((stu => {
   return stu;
 })).filter((stu) => stu.marks > 60).reduce
 ((acc,curr)=> acc + curr.marks,0);
+
+
+const menu = [
+  {
+    id: 1,
+    title: "buttermilk pancakes",
+    category: "breakfast",
+    price: 15.99,
+    img: "./images/item-1.jpeg",
+    desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+  },
+  {
+    id: 2,
+    title: "diner double",
+    category: "lunch",
+    price: 13.99,
+    img: "./images/item-2.jpeg",
+    desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+  },
+]
+ const sectionCenter = document.querySelector(".section-center");
+ const btnContainer = document.querySelector(".btn-container");
+
+ window.addEventListener("DOMContentLoaded",function(){
+  displayMenuItems(menu);
+  displayMenuButtons();
+ });
+
+
+function displayMenuItems(menuItems){;
+let displayMenu = menuItems.map(function(item){
+
+  return `<article class="menu-item">
+          <img src=${item.img} alt=${item.title} class="photo" />
+          <div class="item-info">
+            <header>
+              <h4>${item.title}</h4>
+              <h4 class="price">$${item.price}</h4>
+            </header>
+            <p class="item-text">
+              ${item.desc}
+            </p>
+          </div>
+        </article>`;
+} );
+displayMenu = displayMenu.join("");
+
+sectionCenter.innerHHTML = displayMenu;
+}
+
+function displayMenuButtons(){
+  const categories = menu.reduce(
+    function(values, item){
+      if(!values.includes(item.category)){
+        values.push(item.category);
+      }
+      return values;
+    },["all"]
+  );
+const categoryBtns = categories.map
+(function (category){
+  return`<button type="button"class = "filter-btn" 
+  data-id=${category}>${category} </button>`;
+}).join("");
+btnContainer.innerHTML = categoryBtns;
+const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+console.log(filterBtns);
+
+filterBtns.forEach(function (btn){
+  btn.addEventListener ("click",function (e){
+    const category = e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function(menuItem){
+      if(menuItem.category === category){
+        return menuItem;
+      }
+    });
+    if(category === "all"){
+      displayMenuItems(menu);
+    }else{
+      displayMenuItems(menuCategory);
+    }
+  });
+})
+
+
+
+}
 
 
