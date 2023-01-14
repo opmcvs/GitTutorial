@@ -29,11 +29,10 @@ function displaySquare(fn){
 
 
 
-(function (x){ //IIFE and closures
-  return(function (y){
-    console.log(x);
-  })(3);
-})(7);
+const test7 = ((x) => (function (y) {
+  console.log(x);
+})(3))(7);
+console.log(test7);
 
 
 
