@@ -34,12 +34,17 @@
     position:absolute;    
     z-index:100;
     color:white;
-    margin-left: auto;
+    
     top:700px;
-   
-    left:300px;
-    right:center;
+    left:500px;
     }
        
-
+.switch-btn span {
+   z-index: 80;
+   display: inline-block;
+   font-size: 0.85rem;
+   cursor: pointer;
+   text-transform: capitalize;
+   color: var(--clr-primary-5);
+}
     

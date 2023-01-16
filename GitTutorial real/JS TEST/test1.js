@@ -151,12 +151,12 @@ for (let i =0;i<students.length;i++){
 
 //using map as a one liner
 const names1 = students.map((stu)=> stu.name.toUpperCase());
-console.log(names);
+console.log(names1);
 
 // next question return only students who score 80+
 let grades =[];
 for (let i =0; i<90;i++){
-  grades.push ([i].grades);
+  grades.push (students[i].grades);
 }
 //using filter
 const details = students.filter((stu)=> stu.marks <90);
@@ -170,7 +170,11 @@ console.log(sumTotal);
 const detailsMarks = students.filter((stu)=> stu.marks<90).map
 ((stu)=>stu.name);
 
-//those who got less than 60 will get 20 more marks then thie total
+const detailMarks = students.filter((stu)=>{ 
+return stu.marks <90
+}).map(stu.name)
+
+//those who got less than 60 will get 20 more marks then the total
 const totalOp = students.map((stu => {
   if (stu.marks<60){
     stu.marks += 20;
@@ -178,6 +182,13 @@ const totalOp = students.map((stu => {
   return stu;
 })).filter((stu) => stu.marks > 60).reduce
 ((acc,curr)=> acc + curr.marks,0);
+
+
+
+
+
+
+
 
 
 const menu = [
@@ -265,5 +276,6 @@ filterBtns.forEach(function (btn){
 
 
 }
+
 
 
