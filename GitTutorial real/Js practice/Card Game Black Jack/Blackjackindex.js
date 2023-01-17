@@ -114,6 +114,11 @@ if(age < 6 ){
 }
 console.log(countries());
 
+
+
+
+
+
 const large = "Om"
 let newName = "";
  
@@ -170,6 +175,9 @@ function getHand(){
 }
 console.log(getHand());
 
+
+
+
 //Pratice
 let fruits = ["apple","orange","apple","apple","orange"];
 
@@ -197,19 +205,95 @@ if(fruit === "apple"){
     }
 }
 
+// const btnUp= document.getElementById("btn-up");
+
+// let count = 0;
+
+// btnUp.addEventListener("click",function (){
+//      count += count;
+//    const counter = document.getElementById("counter");  
+//      counter.innerText = count;
+// }
+// )
+
+// Exercise 2
+// Set up a <div id="counter">0</div>, a button with the label "Up", and a variable: let count = 0; so that when clicking the button, the number in the div increases by 1. (hint: use count = count + 1;)
+
+// solution.html
+// <div id="counter">0</div>
+// <button onclick="countUp()">Up</button>
+// <script>
+//   let count = 0;
+
+//   function countUp() {
+//     count = count + 1;
+//     let counter = document.getElementById('counter');
+//     counter.innerText = count;
+//   }
+// </script>
+
+// Exercise 3
+// Set up the same counter as above, but with another button "Down", that decreases the count by one. (hint: use count = count - 1;)
+
+// solution.html
+// <div id="counter">0</div>
+// <button onclick="countUp()">Up</button>
+// <button onclick="countDown()">Down</button>
+// <script>
+//   let count = 0;
+
+//   function countUp() {
+//     count = count + 1;
+//     updateCount();
+//   }
+
+//   function countDown() {
+//     count = count - 1;
+//     updateCount();
+//   }
+
+//   // Not necessary, but BONUS POINTS if you separated this
+//   // repeated code into a function!
+//   function updateCount() {
+//     let counter = document.getElementById('counter');
+//     counter.innerText = count;
+//   }
+// </script>
 
 
+// input id="input" type="text"placeholder="text"/>
+//   <div id="div">div is here</div>
+//   <button id="btn-e4">press</button>
+
+const input=document.getElementById("input");
+const btnTest4 = document.getElementById("btn");
+
+btnTest4.addEventListener("click", function display(){
+  let inputValue =  input.value;
+  let div = document.createElement ("div");
+  div .innerText =inputValue;
+  document.body.appendChild(div);
+  
+
+})
 
 
+// Exercise 4
+// Create a button that takes what's inside the textbox, puts it in a div and adds the div to the page.
 
+// solution.html
+// <input type="text" id="todo-title" />
+// <button onclick="displayTitle()">Display Title</button>
+// <script>
+//   function displayTitle() {
+//     let textbox = document.getElementById('todo-title');
+//     let title = textbox.value;
 
-
-
-
-
-
-
-
+//     let div = document.createElement('div');
+//     div.innerText = title;
+//     document.body.appendChild(div);
+//   }
+// </script>
 
 
 
