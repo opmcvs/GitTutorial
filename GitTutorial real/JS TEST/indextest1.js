@@ -364,3 +364,87 @@ if(todo.id===idToDelete){
     });
    }
    createCart({Apple:3,Orange:4,Egg:3});
+//    Exercise 3
+// Write a function arraySum that takes an array of numbers and console.logs the sum of the numbers. (Hint: create a variable and increase its value like this):
+
+// let totalT = 0;
+// total = total + 10;
+// Example: arraySum([1, 2, 3]); = 6 and arraySum([5, -2, 7, 0]); = 10
+
+function arraySum(numArray) {
+  let totalT = 0;
+
+  numArray.forEach(function (num) {
+    totalT = totalT + num;
+  });
+
+  console.log(totalT);
+}
+arraySum([1, 2, 3]);
+arraySum([5, -2, 7, 0]); 
+
+// Section 8 Exercise 4
+// Create a button that takes what's inside the textbox, 
+// puts it in a div and adds the div to the page.
+
+/* <input type="text" id="todo-title" />
+<button onclick="displayTitle()">Display Title</button>
+<script></script> */
+{/* <script>
+  function displayTitle() {
+    let textbox = document.getElementById('todo-title');
+    let title = textbox.value;
+
+    let div = document.createElement('div');
+    div.innerText = title;
+    document.body.appendChild(div);
+  }
+</script> */}
+
+const inputValue = document.getElementById('todo-title');
+
+const buttonCreate= document.createElement('button');
+const divCreate= document.createElement('div');
+
+
+buttonCreate.addEventListener('click',function(){
+  let value = inputValue.value;
+  divCreate.innerText = value;
+  document.body.appendChild(divCreate);
+})
+
+// Section 9 Exercise 1
+//  Create a shopping cart. Set up a <div id="cart"></div> 
+//  and 4 buttons labeled "Apple", "Tomato", "Eggs", and "Clear". 
+//  When clicking the first 3 buttons, add a div inside the 
+//  <div id="cart"> containing your food selection. When clicking "Clear" 
+//  remove all items from the cart.
+
+// Here’s what it looks like:
+
+{/* <button onclick="addToCart('Apple')">Apple</button>
+<button onclick="addToCart('Tomato')">Tomato</button>
+<button onclick="addToCart('Eggs')">Eggs</button>
+<button onclick="clearCart()">Clear</button>
+<div id="cart"></div>
+<script></script>
+ */}
+//  Mines
+{/* <button id='apple'>Apple</button>
+<button id='Tomato'>Tomato</button>
+<button id='Eggs'>Eggs</button>
+<button id='Clear'>Clear</button>
+<div id="cart"></div>
+<script></script> */}
+
+const cart = document.getElementById('cart');
+
+function addToCart(fruit){
+  const cartItem = document.createElement('div');
+  cartItem.innerText = fruit;
+  cart.appendChild(cartItem);
+}
+function clearCart() {
+    cart.innerHTML = '';
+  }
+
