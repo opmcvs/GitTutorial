@@ -66,7 +66,7 @@
    font-size: 0.85rem;
    cursor: pointer;
    text-transform: capitalize;
-   color: var(--clr-primary-5);
+   
 }
 .switch {
    position: absolute;
@@ -75,12 +75,30 @@
    top: 0;
    left: 0;
    background:blueviolet;
-   border-radius: var(--radius);
+    border-radius: 5px;
    margin: 0;
    display: block;
-   transition: var(--transition);
+   /* transition: var(--transition); */
 }
 .slide .switch{
    left:50%;
+}
+.preloader{
+   position :fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   background:whitesmoke;
+   display:grid;
+   justify-content:center;
+   z-index:110;
+   padding-top:100px;
+
+}
+
+.remove-preloader{
+   z-index:70;
+   visibility:hidden;
 }
     

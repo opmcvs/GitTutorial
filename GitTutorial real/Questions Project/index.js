@@ -1,8 +1,8 @@
 //First solution is traversing the DOM(moving up and down the DOM tree).
 //Second option will be using the selectors.
 
-const btns= document.querySelectorAll('.question-btn')
-const questions = document.querySelectorAll('.question')
+const btns= document.querySelectorAll('.question-btn')  // btn class for all buttons
+const questions = document.querySelectorAll('.question')// article  in html
 
 btns.forEach(function(btn){
 btn.addEventListener('click', function(e){

@@ -183,6 +183,19 @@ const totalOp = students.map((stu => {
 })).filter((stu) => stu.marks > 60).reduce
 ((acc,curr)=> acc + curr.marks,0);
 
+const totalOP = students.map((stu)=>{
+if (stu.marks <60){
+  stu.marks+= 20;
+}
+return stu;
+}).filter((stu)=>{
+  stu.marks >60
+}).reduce((acc , curr)=>{
+  acc +curr. marks
+},0)
+
+
+
 
 
 

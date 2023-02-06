@@ -231,7 +231,14 @@ cartTotal([
   {name: 'apple', price: 4,quantity:2},
   {name: 'orange', price:3, quantity:3}
 ]);
+ function cartTotal(cartArray){
+  let total = 0;
 
+  cartArray.forEach(function (item) {
+    total += item.price *item.quantity;
+  })
+  console.log(total);
+ }
 
 
 //IIFE example 
@@ -242,6 +249,7 @@ const tentFb = (function fib(n){
   }
   return fib(n-1) + fib(n-2)
 }) (10);
+
 
 
 
@@ -448,3 +456,55 @@ function clearCart() {
     cart.innerHTML = '';
   }
 
+// Exercise 2
+// Create a cm-inch converter. Create a textbox, 
+// 2 buttons: "Convert to cm" and "Convert to inch", 
+// and a <div id="result"></div>.
+
+// When clicking the "Convert to cm" button, take 
+// the value in the texbox, convert it from a string 
+// to a number (hint: use + to convert a string to a 
+//   number. Example: +'10'), then display the result
+//    in cm in the <div id="result">
+
+// Examples:
+// value in textbox = 1, Click "Convert to cm", <div id="result">2.54 cm</div>
+// value in textbox = 25.4, Click "Convert to in", <div id="result">10 in</div>
+
+const inchButton= document.getElementById('inch-btn');
+const cmButton= document.getElementById('cm-btn');
+let valueIn = document.getElementById('value');
+const output = document.getElementById('output');
+
+inchButton.addEventListener('click',()=>{
+  inchValue= valueIn.value;
+  const converTed = +inchValue *2.54;
+  // const result = document.createElement('div');
+  // result.textContent = converTed;
+  output.textContent = converTed;
+
+})
+// Exercise 10
+// Write a function cartTotal that takes an array 
+// of objects cartArray where each object contains 
+// a name, price, and quantity. console.log the total 
+// price of the items in the cart. For example:
+
+// cartTotal([
+//   { name: 'Apple', price: 4, quantity: 2 },
+//   { name: 'Orange', price: 3, quantity: 3 }
+// ]);
+// Will console.log(17);
+
+function cartTotal (cartArray){
+  let total =0;
+  cartArray.forEach(function(item){
+    total = total + item.price * item.quantity
+  });
+  console.log(total);
+}
+
+const testCreate = document.getElementById('testCreate')
+
+const testerView = document.createElement('div');
+testerView.textContent = "Hi";
