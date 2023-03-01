@@ -20,7 +20,14 @@ color: var(--clr-primary-5);
 .open-modal {
     visibility:visible;
     z-index: 10;
+    color:white;
 }
+
+.banner{
+    text-transform: capitalize;
+}
+
+
 .modal-container {
     background:var(--clr-white);
 }

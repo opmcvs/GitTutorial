@@ -148,10 +148,10 @@ render(myLeads)
 
 //practice
 const looks = ["power", "lool", "what"];
-//let loopUp = looks.map((look) => {
- //return look + "is this it sauromon";
-//})
-//console.log(looks);
+// let loopUp = looks.map((look) => {
+//  return look + "is this it sauromon";
+// })
+// console.log(looks);
 
 looks.forEach(lookpar) 
 
@@ -303,7 +303,11 @@ let stringCheck = string1.toLowerCase();
 return stringCheck.includes(string2.toLowerCase());
 }
 
-console.log(stringL("What is this","what"));
+
+
+
+
+
 
 //Write a function that takes an array of objects and 
 //returns an array  of the objects "none" only if the property 

@@ -12,5 +12,6 @@ closeBtn.addEventListener('click',function(){
     console.log(closeBtn.classList)
 
 modal.classList.remove("open-modal")
+modal.classList.add("open-modals")
 
 })  
