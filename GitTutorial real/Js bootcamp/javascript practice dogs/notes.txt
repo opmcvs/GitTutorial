@@ -1,0 +1,31 @@
+public apis- on git hub go to public apis-scroll down
+go to animals - dogs
+
+Endpoints - are just URL'S 
+
+fetch ()- is a web browser function, its not
+only returning data but a promise
+
+A promise- meaning it won't stop other programs 
+from running even though its the first line
+It has a method named then() (you can give it A
+function as an arguement and it will wait to call 
+the then functin until the first code is completed)
+
+ex.fetch("https://dog.ceo/api/breeds/list/all").then()
+
+fetch("https://dog.ceo/api/breeds/list/all").then(function(response){
+    return response.json()
+}).then()
+
+the response - the fetch url server response
+
+const response = await fetch("")
+the await fetch() makes sure that the other code will not run 
+until what's inside the await will run
+
+The <select> element is used to create a drop-down list. 
+The <select> element is most often used in a form, to collect 
+user input. The name attribute is needed to reference the form
+ data after the form is submitted (if you omit the name attribute, 
+ no data from the drop-down list will be submitted).

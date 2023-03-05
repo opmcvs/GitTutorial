@@ -1,0 +1,23 @@
+body{
+margin:0;
+}
+.app{
+    height: 1000px;
+    width: 1000px;
+    display:flex;
+    flex-direction:column;
+    font-family:cursive;
+}
+
+
+.header{
+    background-color: blue;
+    text-align:center;
+    display: flex;
+}
+
+.slideshow{
+    flex:1;
+    background-color: darkgreen;
+}
+
