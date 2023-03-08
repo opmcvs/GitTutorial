@@ -1,0 +1,25 @@
+Nuggest series https://www.youtube.com/playlist?list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ
+1. map always returns the new array doesnt change the 
+length of the array 
+
+to convert objects to arrays use
+const person = {
+    firstName: 'John',
+    lastName: 'Doe,
+    };
+
+ const propertyNames  =  Object.keys(person);
+ // that's it  for the keys 
+
+ // for the values of the object keys ex- John
+use Object.values instead of Object.keys
+
+To convert the enumerable string-keyed properties of an object to an array, you use the Object.entries() method. For example:
+
+const entries = Object.entries(person);
+
+console.log(entries);
+Code language: JavaScript (javascript)
+Output:
+
+[ [ 'firstName', 'John' ], [ 'lastName', 'Doe' ] ]

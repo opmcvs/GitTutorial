@@ -116,7 +116,7 @@ if (item!=""){
 
 })
 
-console.log(getUniqu)
+console.log(getUnique2)
 
 // option 3 filter
 const getUnique3 =()=>{

@@ -41,6 +41,21 @@ if(breed != "Choose a dog breed"){
 // in the fetch connected to api breed 
 const data = await response.json()
 console.log(data)
+createSlideshow(data.message)
 
 }
 }
+
+function createSlideshow(images){
+    let currentPosition  = 0;
+    document.getElementById("slideshow").innerHTML =
+    `<div class="slide" style="background-image: url('${images[0]}')"></div>
+    <div class="slide" style="background-image: url('${images[1]}')"></div>`
+ currentPosition +=2
+ setInterval(nextSlide,3000)
+
+ function nextSlide(){
+   document.getElementById("slideshow").insertAdjacentHTML() 
+ }
+}
+ 

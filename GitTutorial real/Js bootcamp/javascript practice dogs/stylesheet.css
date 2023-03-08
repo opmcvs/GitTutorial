@@ -1,23 +1,66 @@
+
+
+
+
+
 body{
 margin:0;
+font-family: cursive;
+width:1000px;
+height:1000px;
+
 }
 .app{
-    height: 1000px;
-    width: 1000px;
+    
+    width: 100%;
+    height: 100%;
     display:flex;
     flex-direction:column;
-    font-family:cursive;
+   
 }
 
 
 .header{
-    background-color: blue;
+    
     text-align:center;
-    display: flex;
+    padding:  20 px 0;
+    font-size:large;
+    /* display:flex;
+    justify-content: center; */
+   
 }
 
+.header h1{
+    margin: 0 0 10px 0;
+}
 .slideshow{
     flex:1;
+    display:flex;
     background-color: darkgreen;
+    position :relative;
+    
 }
 
+.slide{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: red;
+    background-repeat:no-repeat;
+    /* to avoid tiling of the picture */
+    background-size:contain;
+    background-position:center center;
+    opacity:0;
+    transform:scale(1);
+    transition:all .9s ease-out;
+}
+
+/* it will select the second the last item of slide */
+/* makes sure the second to last image is always visible. */
+/* the transform:scale-resizes an element  */
+.slide:nth-last-child(2){
+ opacity: 1;
+ transform:scale(1.08);
+}

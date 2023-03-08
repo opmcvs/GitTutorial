@@ -1,0 +1,14 @@
+to reset all margin using a will card
+*{
+    margin:0;
+    padding:0;
+    box-sizing:default is content-box;- not account the padding etc
+    box-sizing: border-box - better.
+}
+
+outline: 5px solid purple;- this goes another layer from the border
+outline-offset: pushes the outline from the border box
+note left and right when use auto in margin - it will center it. 
+
+
+2 rem for the root of the browser = 16px
