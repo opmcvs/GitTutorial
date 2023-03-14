@@ -12,3 +12,12 @@ note left and right when use auto in margin - it will center it.
 
 
 2 rem for the root of the browser = 16px
+
+input, button {
+    font: inherit - this will inherent from parent like body{}
+
+}
+
+text-align: justify the edges would be alike like a paragraph
+text-indent: 2 em; - the space at the beginning of the p
+

@@ -55,7 +55,7 @@ function createSlideshow(images){
  setInterval(nextSlide,3000)
 
  function nextSlide(){
-   document.getElementById("slideshow").insertAdjacentHTML() 
+   document.getElementById("slideshow").insertAdjacentHTML("beforeend",`<div class="slide" style="background-image: url('${images[currentPosition]}')"></div>`) 
  }
 }
  

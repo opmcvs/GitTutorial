@@ -157,6 +157,10 @@ for (let i =0;i<students.length;i++){
 }
 //to output only the students name in uppercase.
 
+
+
+
+
 //using map as a one liner
 const names1 = students.map((stu)=> stu.name.toUpperCase());
 console.log(names1);
@@ -164,14 +168,21 @@ console.log(names1);
 // next question return only students who score 80+
 let grades =[];
 for (let i =0; i<90;i++){
-  grades.push (students[i].grades);
+  grades.push (students[i].marks);
 }
+
+
+
 //using filter
 const details = students.filter((stu)=> stu.marks <90);
+
+
 
 //calculate all the marks of the students.
 const sumTotal = students.reduce((acc,curr)=> acc + curr.marks,0);
 console.log(sumTotal);
+
+
 
 // names of students who only scored above 85
 
@@ -179,8 +190,14 @@ const detailsMarks = students.filter((stu)=> stu.marks<90).map
 ((stu)=>stu.name);
 
 const detailMarks = students.filter((stu)=>{ 
-return stu.marks <90
-}).map(stu.name)
+  return stu.marks <90
+ }).map((stu)=>{
+   return stu.name})
+
+console.log(detailMarks)
+
+
+
 
 //those who got less than 60 will get 20 more marks then the total
 const totalOp = students.map((stu => {

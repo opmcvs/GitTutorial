@@ -46,6 +46,7 @@ const getUnique2 = arr.filter((item)=>{
  let itemUnique =""   
 if(item === item){
   itemUnique = "";
+
 }else {
     itemUnique = item;
 }

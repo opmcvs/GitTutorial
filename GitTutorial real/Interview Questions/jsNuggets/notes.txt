@@ -23,3 +23,46 @@ Code language: JavaScript (javascript)
 Output:
 
 [ [ 'firstName', 'John' ], [ 'lastName', 'Doe' ] ]
+
+no.3 -Dynamic Object keys
+https://www.youtube.com/watch?v=_qxCYtWm0tw&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=3
+
+// no. 4 Filter and find methods
+https://www.youtube.com/watch?v=KeYxsev737s&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=4
+Filter - can return a new array, manipulate the size
+ of the array unlike map, returns base on condition
+
+ Find- returns single instance-object , returns first match
+ if no match undefined.  
+
+
+ // no.5 Reduce basics
+ https://www.youtube.com/watch?v=3WkW9nrS2mw&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=5
+always must return the total or acc
+the most to replace filter and find but more complicated.
+iterates, then call back function 
+reduces to a single value-number, array, object
+1st parameter - acc - total of all calculations
+2nd parameter- curr - current iteration / value
+
+
+// no.6 reduce - objects
+https://www.youtube.com/watch?v=5BFkp8JjLEY&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
