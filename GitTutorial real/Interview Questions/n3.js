@@ -2,7 +2,7 @@
 const name1 = "W3Schools";
 
 // List all Elements
-let text = ""
+let text = "";
 for (const x of name1) {
   text += x+ "<br>" ;
 }
@@ -22,25 +22,16 @@ function square(num){
 }
 
 
-
-function displaySquare(fn){
-//return ("this is the answer"+ (5))
- // return (`this is the answer    ${5}`);
-  return ("this is the answer"+ fn(5)); 
-}
-
-
-
-
-
-
-
 const test7 = ((x) => (function (y) {
   console.log(x);
 })(3))(7);
 console.log(test7);
 
-
+const test9 =  ((x)=>{
+  function luke (y){
+    
+  }
+})
 
 
 
@@ -86,6 +77,16 @@ const add = (function () {
     return counter;}
 })();
 
+const adds = (function (){
+  let counter = 0;
+  return function (){
+    counter ++;
+    return counter;
+  }
+})
+
+
+
 function myFunction(){
   document.getElementById("demo").innerHTML = add();
 }
@@ -120,7 +121,7 @@ const nums1 = [1,2,3, 4];
 const moreThanTwo = nums1.filter((num1)=>{
 returns >2
 })
-console.log(nums1);
+console.log(moreThanTwo);
 
 
 
@@ -164,6 +165,9 @@ for (let i =0;i<students.length;i++){
 //using map as a one liner
 const names1 = students.map((stu)=> stu.name.toUpperCase());
 console.log(names1);
+const names2 = students.map((stu)=>{
+  return stu.name.toUpperCase();
+})
 
 // next question return only students who score 80+
 let grades =[];
@@ -218,6 +222,204 @@ return stu;
 }).reduce((acc , curr)=>{
   acc +curr. marks
 },0)
+
+
+// interview questions
+// https://www.youtube.com/watch?v=0ltJGE5Y4Mk
+
+// count vowels inside a string
+// const findVowels = (str)=>{
+//   const vowels = [ 'a','u','o','i','e',];
+//   let count = 0;
+//   for (let char of str){
+//     if(vowels.includes(char)){
+//       count++
+// ;    }
+//   }
+//   return count;
+// }
+
+// console.log(findVowels('nanna'));
+
+const findVowels = (str)=>{
+  const vowels = [ 'a','u','o','i','e',];
+  let count = 0;
+  for (let i = 0; i<str.length; i++){
+    if(vowels.includes(str[i])){
+      count++
+;    }
+  }
+  return count;
+}
+
+console.log(findVowels('string'));
+
+
+// using reduce
+const findVowels1 = (str)=>{
+  const vowels = [ 'a','u','o','i','e',];
+
+  return str.toLoweCase().split('').reduce((acc,curr)=>{
+ if(vowels.includes(curr)){
+  acc++;
+ }
+return acc;
+},0)
+
+};
+
+//using Ternary operator
+ const findVowels2 = (str)=>{
+  const vowels = ['a','e','i','o','u'];
+
+  return str.toLoweCase().split('').reduce((acc,curr)=>{
+ 
+    return vowels.includes (curr)? acc+1:acc;
+  },0)
+ }
+
+//  reverse each word in a sentence
+let answer = ""
+const reverseString = (str)=>{
+  const rev = [...str]
+  for(let i = 0 ;i< str.length-1; i--){
+ answer = str[i]
+  }
+}
+
+ console.log(reverseString("reverse each word"));
+
+// the other option of the hosts
+const reverseString1 = (str)=>{
+  str.split('').reverse().join('');
+}
+
+// define a function that takes an array of strings and 
+// returns the most commonly occuring string in that array
+
+// the beginner approach
+const commonString = (str)=>{
+  const string = {};
+
+  str.forEach((st)=>{
+  if(string[st]=== undefined){
+    string[st] = 1;
+  }else{
+    string[st]++;
+  }
+  });
+
+  let maxEntry;
+  let maxValue = 0;
+
+  for(common in string){
+    if(string[common] > maxValue){
+         maxEntry = common;
+         maxValue = string[common];
+    }
+  }
+  return maxEntry;
+  console.log(string)
+}
+console.log(commonString(['a','b','c','a']))
+
+// advance approach
+const mostFrequent = (arr)=>{
+  const mapping = arr.reduce((acc,el)=>{
+    acc[el]= acc [el]? acc[el] + 1:1;
+    return acc;
+  },{});
+  return Object.entries(mapping).reduce((acc,el)=>{
+ el[1] > acc[1] ? el: acc
+  },[null,0])[0];
+
+}
+console.log(mostFrequent(['a','b','c','a']))
+
+// advance interview questions
+// https://www.youtube.com/watch?v=-8qfwR-ANDk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // next target :https://www.youtube.com/watch?v=USbiLiF9NDY&list=PLyuRouwmQCjlLW9NjqoBbf9eVaFX4F9UZ

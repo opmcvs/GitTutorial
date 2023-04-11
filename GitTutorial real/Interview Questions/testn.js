@@ -1,55 +1,23 @@
-const url = 'https://api.github.com/users/john-smilga/repos?per_page=100'
-
-const fetchRepos = async () =>{
-const response = await fetch(url);
-const data = await response.json()
-
-const newData = data.reduce((acc, curr)=>{
-  const {language}= curr; 
-  if (language) {
-  if(acc[language]){
-    acc[language] = acc [language] + 1
-  }else {
-    acc [language]=1
-  }
+const add = (function (x) {
+  let counter = 0;
+  x= 0 ;
+  return function () {
+    for(let i = 0; i< x.length; i++){
+      counter += x[i];
+    }
+    counter += 1; 
+    return counter;}
+}) ();
+console.log(add(4))
+function myFunction(){
+  document.getElementById("demo").innerHTML = add();
 }
-return acc
-},{})
 
 
-}
-console.log(fetchRepos())
-
-
-const newData = data.reduce((acc, curr)=>{
-  const {language}= curr; 
-  if (language) {
-    acc[language] = acc[language] +1 || 1
+const addNumber = (function (){
+  let counter = 0;
+  return function (){
+    counter += 1;
+    return counter;
   }
-
-return acc
-},{})
-
-
-
-console.log(fetchRepos())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})

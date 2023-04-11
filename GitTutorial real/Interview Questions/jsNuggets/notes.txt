@@ -50,11 +50,51 @@ reduces to a single value-number, array, object
 https://www.youtube.com/watch?v=5BFkp8JjLEY&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=6
 
 
+// no.7 Destructuring Array
+to unpacked from arrays ,objects
+once destructured it follows the order on the array 
+you can name the destructure any name you want 
+const friends = ['john', 'peter','bob','anna','kelly'];
+
+const [john,] = friends// or can name john  to lolo
+https://www.youtube.com/watch?v=qhECs40xMec&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=7
+
+// no. 8  destructuring object.
+in here the order doesn't matter 
+you can have aliases like
+const bob = {
+    first:'bob',
+    last:'sanders,
+    city: 'chicago',
+    siblings:{
+        sister:'jane',
+    } 
+}
+const {last:shakeAndBake}= bob;
+the out put will be sanders
+https://www.youtube.com/watch?v=i4vhNKihfto&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=8
+
+// no.9 Rest Operator
+https://www.youtube.com/watch?v=f-frKsJoBQU&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=9
+gathers collects totalItems that's the purpose of rest Operator
+rest is function declaration whereas spread is invocation.
+destructuring,functions
+placement important,careful with the same name, coz if use it in name can only use it once.
+rest when declare function , spread when invoke the function 
 
 
 
+//arrays
+const fruits = ['apple','orange', 'lemon','banana'];
+const [first]= fruits;
 
+// no.10 Spread operator
+https://www.youtube.com/watch?v=4Zyr5a3m0Fc&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=10
+use for invoking as stated above
+split into single items and copy them-so no change the values
 
+// no.11 Array.from
+https://www.youtube.com/watch?v=zg1Bv4xubwo&list=PLnHJACx3NwAfRUcuKaYhZ6T5NRIpzgNGJ&index=11
 
 
 
